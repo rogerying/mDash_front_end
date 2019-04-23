@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en-us" metal:define-macro="admin">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Roger Ying">
+    <link rel="shortcut icon"
+          href="/static/img/fav.png?cacheId=${view.build_cache_id('/static/img/fav.png')}">
+
+    <title>mDash AI Admin</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Custom fonts for this template-->
+    <link href="/static/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+
+    <!-- Custom styles for this scaffold -->
+
+    <link href="/static/admin/css/sb-admin-2.min.css?cacheId=${view.build_cache_id('/static/admin/css/sb-admin-2.min.css')}"
+          rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
+    <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
+    <![endif]-->
+
+</head>
+
+<body class="bg-gradient-primary">
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-6 col-md-6">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-4">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6" align="center">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Login to the mDash Admin!</h1>
+                                </div>
+                                <form class="user" action="" method="POST">
+                                    <div class="card bg-danger text-white shadow" tal:condition="error">
+                                        <div class="card-body">
+                                                ${error}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user"
+                                               value="${email}" name="username"
+                                               placeholder="Enter Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                               value="${password}" name="password"
+                                               id="exampleInputPassword" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input"
+                                                   id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">Remember
+                                                Me</label>
+                                        </div>
+                                    </div>
+                                    <button type=submit class="btn btn-primary btn-user btn-block">
+                                        Login
+                                    </button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/admin/vendor/jquery/jquery.min.js?cacheId=${view.build_cache_id('/static/admin/vendor/jquery/jquery.min.js')}"></script>
+<script src="/static/admin/vendor/bootstrap/js/bootstrap.bundle.min.js?cacheId=${view.build_cache_id('/static/admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/static/admin/vendor/jquery-easing/jquery.easing.min.js?cacheId=${view.build_cache_id('/static/admin/vendor/jquery-easing/jquery.easing.min.js')}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/static/admin/js/sb-admin-2.min.js?cacheId=${view.build_cache_id('/static/admin/js/sb-admin-2.min.js')}"></script>
+
+</body>
+</html>

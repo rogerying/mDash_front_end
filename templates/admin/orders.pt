@@ -1,0 +1,256 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <h1 class="h3 mb-2 text-gray-800">All Orders</h1>
+
+        <br>Status Guidelines
+        <br>0: open/new ; 1: ordered ; 2: paid 3: confirmed_received ; 4: links_gen 5: outstanding ; 6: finished
+        <br><br>
+
+        <h4>Outstanding Orders</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="outstanding_orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Account E-mail</th>
+                            <th>Created</th>
+                            <th>Item</th>
+                            <th>Total Links</th>
+                            <th>Used Links</th>
+                            <th>Remaining Links</th>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Total Cost</th>
+                            <th>Order Details</th>
+                            <th>Inc Status Test</th>
+                            <th>Payment Test</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 5">
+                                <td>${o.account_email}</td>
+                                <td>${o.created}</td>
+                                <td>${o.item}</td>
+                                <td>${o.total_links}</td>
+                                <td>${o.used_links} </td>
+                                <td>${o.total_links - o.used_links}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.status}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <form action="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        <input class="btn btn-success" type="submit" value="Order Details">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/status_inc_test/${o.account_id}:${o.order_id}"
+                                          method="POST">
+                                        <input class="btn btn-success" type="submit" value="Inc Status test">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/pay_test/${o.account_id}:${o.order_id}" method="POST">
+                                        <input class="btn btn-success" type="submit" value="Payment TEST">
+                                    </form>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <h4>Orders Being Processed</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="being_processed">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Account E-mail</th>
+                            <th>Created</th>
+                            <th>Item</th>
+                            <th>Total Links</th>
+                            <th>Used Links</th>
+                            <th>Remaining Links</th>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Total Cost</th>
+                            <th>Order Details</th>
+                            <th>Inc Status Test</th>
+                            <th>Payment Test</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 3 or o.status == 4">
+                                <td>${o.account_email}</td>
+                                <td>${o.created}</td>
+                                <td>${o.item}</td>
+                                <td>${o.total_links}</td>
+                                <td>${o.used_links} </td>
+                                <td>${o.total_links - o.used_links}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.status}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <form action="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        <input class="btn btn-success" type="submit" value="Order Details">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/status_inc_test/${o.account_id}:${o.order_id}"
+                                          method="POST">
+                                        <input class="btn btn-success" type="submit" value="Inc Status test">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/pay_test/${o.account_id}:${o.order_id}" method="POST">
+                                        <input class="btn btn-success" type="submit" value="Payment TEST">
+                                    </form>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h4>Orders Awaiting Payment</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="awaiting_payment">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Account E-mail</th>
+                            <th>Created</th>
+                            <th>Item</th>
+                            <th>Total Links</th>
+                            <th>Used Links</th>
+                            <th>Remaining Links</th>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Total Cost</th>
+                            <th>Order Details</th>
+                            <th>Inc Status Test</th>
+                            <th>Payment Test</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 1 or o.status == 2">
+                                <td>${o.account_email}</td>
+                                <td>${o.created}</td>
+                                <td>${o.item}</td>
+                                <td>${o.total_links}</td>
+                                <td>${o.used_links} </td>
+                                <td>${o.total_links - o.used_links}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.status}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <form action="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        <input class="btn btn-success" type="submit" value="Order Details">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/status_inc_test/${o.account_id}:${o.order_id}"
+                                          method="POST">
+                                        <input class="btn btn-success" type="submit" value="Inc Status test">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/pay_test/${o.account_id}:${o.order_id}" method="POST">
+                                        <input class="btn btn-success" type="submit" value="Payment TEST">
+                                    </form>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h4>Historic Orders</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="historic_orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Account E-mail</th>
+                            <th>Created</th>
+                            <th>Item</th>
+                            <th>Total Links</th>
+                            <th>Used Links</th>
+                            <th>Remaining Links</th>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Total Cost</th>
+                            <th>Order Details</th>
+                            <th>Inc Status Test</th>
+                            <th>Payment Test</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 6">
+                                <td>${o.account_email}</td>
+                                <td>${o.created}</td>
+                                <td>${o.item}</td>
+                                <td>${o.total_links}</td>
+                                <td>${o.used_links} </td>
+                                <td>${o.total_links - o.used_links}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.status}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <form action="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        <input class="btn btn-success" type="submit" value="Order Details">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/status_inc_test/${o.account_id}:${o.order_id}"
+                                          method="POST">
+                                        <input class="btn btn-success" type="submit" value="Inc Status test">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/admin/pay_test/${o.account_id}:${o.order_id}" method="POST">
+                                        <input class="btn btn-success" type="submit" value="Payment TEST">
+                                    </form>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+
+    </div>
+
+</div>
+

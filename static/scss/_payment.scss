@@ -1,0 +1,114 @@
+.payment-page {
+	.block-cards {
+		margin-bottom: 250px;
+	}
+	
+	.block-info-msg {
+		max-width: calc(100% - 293px);
+	}
+	
+	.btn.btn-submit.btn-conf {
+		width: 263px;
+	}
+	
+	.card {
+		margin-bottom: 50px;
+		
+		&.card-promotions {
+			.block-checkbox-slider .checkbox + label:after {
+				background: #fff2ef;
+			}
+			
+			.code {
+				max-width: 334px;
+				height: 102.5px;
+				border-radius: 10px;
+				background-image: linear-gradient(to top, #84eee9, #4dd9cf);
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				
+				span {
+					transform: rotate(-17deg);
+					opacity: 0.9;
+					font-family: $font-helvetica;
+					font-size: 32px;
+					font-weight: bold;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: 1;
+					letter-spacing: -2.6px;
+					text-align: center;
+					color: $color-white;
+					display: inline-block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 50%;
+					margin-top: -16px;
+				}
+			}
+			
+			.block-activate {
+				h3 {
+					font-family: $font-helvetica;
+					font-size: 22px;
+					margin-bottom: 20px;
+				}
+				.block-checkbox-slider {
+					display: inline-block;
+					float: none;
+				}
+			}
+			
+			.top-info {
+				padding: 0;
+			}
+		}
+	}
+	
+	.card-3 {
+		p {
+			font-size: 12px;
+		}
+		
+		.bottom-info {
+			background-color: rgba($color-white, 0.9);
+			box-sizing: border-box;
+			margin-top: 26px;
+			padding: 12px 30px;
+			width: 100%;
+			
+			.grey-text {
+				text-align: right;
+			}
+		}
+		
+		.card-body {
+			padding-top: 44px;
+		}
+		
+		.top-info {
+			box-sizing: border-box;
+			display: table;
+			padding: 0 30px;
+			width: 100%;
+			
+			.blue-text {
+				padding: 3px 0;
+				width: 50%;
+				
+				&.float-left {
+					text-transform: uppercase;
+				}
+				
+				&.float-right {
+					text-align: right;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

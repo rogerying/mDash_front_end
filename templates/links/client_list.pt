@@ -1,0 +1,30 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container">
+            <div class="row upcoming">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h1>Client List</h1>
+
+                    <div><br> Below is a list of Clients that have already redeemed a gift
+                        <br> Client Name / e-mail / telephone number / allowed remaining links / claimed
+
+                        <ul tal:repeat="c client_list">
+                            <li>${c.name} /${c.email} / ${c.telephone} / ${c.allowed_remaining_links} /
+                                ${c.claimed_links} / ${c.total_used_links}
+                                     </li>
+                        </ul>
+                        <br>
+                        <br>
+                    </div>
+                    <br> <a href="/account/index">
+                    >Back to account page</a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

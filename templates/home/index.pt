@@ -1,0 +1,203 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <section class="section-page home-page">
+            <div class="section-page-content">
+                <div class="section-1">
+                    <div class="container">
+                        <div class="block-1">
+                            <div class="row">
+                                <div class="col-12 col-sm-8 col-lg-6">
+                                    <h1>The easy way</h1>
+                                    <h3>to ship gifts <span>worldwide</span>.</h3>
+                                    <p>You want to send your friend, customer or<br/> an employee a gift. Where do you
+                                        start? Powered<br/> by AI, we help you choose a product, and then<br/> take care
+                                        of the rest.</p>
+                                    <p>Yes. It’s really <span>that easy</span>.</p>
+                                    <a href="/account/register" class="btn btn-submit btn-green">Get Started</a>
+                                </div>
+                                <img src="/static/img/home_graphic.png"
+                                     srcset="/static/img/home_graphic@2x.png 2x, /static/img/home_graphic@3x.png 3x">
+                            </div>
+                        </div>
+                        <div class="block-2">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="block-with-info">
+                                        <img src="/static/img/select.png"
+                                             srcset="/static/img/select@2x.png 2x, /static/img/select@3x.png 3x">
+                                        <div class="line"></div>
+                                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                            pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper
+                                            diam molestie.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="block-with-info">
+                                        <img src="/static/img/link.png"
+                                             srcset="/static/img/link@2x.png 2x, /static/img/link@3x.png 3x">
+                                        <div class="line"></div>
+                                        <div class="text">Phasellus ligula ipsum, volutpat eget semper id, viverra eget
+                                            nibh. Suspendisse luctus mattis cursus. Nam consectetur.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="block-with-info">
+                                        <img src="/static/img/shipping.png"
+                                             srcset="/static/img/shipping@2x.png 2x, /static/img/shipping@3x.png 3x"/>
+                                        <div class="line"></div>
+                                        <div class="text">Donec elementum, lacus at mattis tincidunt, eros magna
+                                            faucibus sem, in condimentum est augue tristique risus.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-3">
+                        <img src="/static/img/home_1.png" class="home-img-1"/>
+                        <img src="/static/img/home_3.png" class="home-img-3"/>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="row">
+                                        <div class="col-6 col-lg-3">
+                                            <img src="/static/img/orders.png"
+                                                 srcset="/static/img/orders@2x.png 2x, /static/img/orders@3x.png 3x"/>
+                                            <div class="number">2.3k</div>
+                                            <div class="line"></div>
+                                            <p>orders placed</p>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <img src="/static/img/choices.png"
+                                                 srcset="/static/img/choices@2x.png 2x, /static/img/choices@3x.png 3x"/>
+                                            <div class="number">14k</div>
+                                            <div class="line"></div>
+                                            <p>product choices</p>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <img src="/static/img/shipped.png"
+                                                 srcset="/static/img/shipped@2x.png 2x, /static/img/shipped@3x.png 3x"/>
+                                            <div class="number">$1.2m</div>
+                                            <div class="line"></div>
+                                            <p>goods shipped</p>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <img src="/static/img/countries.png"
+                                                 srcset="/static/img/countries@2x.png 2x, /static/img/countries@3x.png 3x"/>
+                                            <div class="number">14</div>
+                                            <div class="line"></div>
+                                            <p>countries</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 text-center">
+                                    <img src="/static/img/home_2.png" class="home-img-2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-2">
+                    <div class="container">
+                        <h3 class="title">Why use mDash?</h3>
+
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="block-item-why">
+                                    <img src="/static/img/event.png"
+                                         srcset="/static/img/event@2x.png 2x, /static/img/event@3x.png 3x">
+                                    <p>Running an event or conference?  Make sure all your attendees
+								receive their free gifts</p>
+
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/friends.png" srcset="/static/img/friends@2x.png 2x, /static/img/friends@3x.png 3x" />
+							<p>Send gifts to friends and family members</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/campaign.png" srcset="/static/img/campaign@2x.png 2x, /static/img/campaign@3x.png 3x" />
+							<p>Running a marketing campaign? Incentivize actions and
+								track your claims</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/peace.png" srcset="/static/img/peace@2x.png 2x, /static/img/peace@3x.png 3x" />
+							<p>Don’t waste time on logistics and don’t worry about money
+								on fulfillment</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/promote.png" srcset="/static/img/promote@2x.png 2x, /static/img/promote@3x.png 3x" />
+							<p>Promote your brand directly
+								via social media</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/borderless.png" srcset="/static/img/borderless@2x.png 2x, /static/img/borderless@3x.png 3x" />
+							<p>Be borderless! Send items
+								to any continent without hefty
+								shipping fees / organization</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/loyalty.png" srcset="/static/img/loyalty@2x.png 2x, /static/img/loyalty@3x.png 3x" />
+							<p>Drive your loyalty program with
+								mDash with the selection of
+								any item on Amazon</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/security.png" srcset="/static/img/security@2x.png 2x, /static/img/security@3x.png 3x" />
+							<p>mDash adds security measures to securely send your items to specific persons to claim</p>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="block-item-why">
+							<img src="/static/img/payment.png" srcset="/static/img/payment@2x.png 2x, /static/img/payment@3x.png 3x" />
+							<p>mDash allows for different forms
+								of payment, from credit card
+								to alipay to btc</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-3">
+		    <form class="standard-form" method="POST" action="/newsletter/add_subscriber">
+			<div class="container">
+				<div class="all-info">
+					<h3 class="title">Want to stay in the loop?</h3>
+					<h4>Subscribe below!</h4>
+					<div class="block-input">
+
+						<div class="form-group">
+							<input name="email" type="text" class="form-control" placeholder="Enter email here" />
+						</div>
+						<button class="btn btn-submit btn-green">Subscribe</button>
+					</div>
+
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+    </div>
+</div>

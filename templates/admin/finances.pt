@@ -1,0 +1,292 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+<!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Financials</h1>
+          </div>
+
+                  <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-4 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-10 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Revenue</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$ ${round(total_payments, 2)}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-4 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-10 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Service Cost Received</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$ ${round(total_service, 2)}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                          <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-4 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-10 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Item Cost</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$ ${round(total_item_cost, 2)}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        <!--? div row-->
+
+        <h4>Confirmed received payment (Status 3+)</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order</th>
+                            <th>User</th>
+                            <th>Currency</th>
+                            <th>Payment Type</th>
+                            <th>Item Cost</th>
+                            <th>Service Cost</th>
+                            <th>Total Amount</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status > 2">
+                                <td>${o.created}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.account_email}</td>
+                                <td>${o.purchase_details.currency_paid}</td>
+                                <td>${o.purchase_details.payment_type} </td>
+                                <td>$ ${round(o.item_total_cost, 2)}</td>
+                                <td>$ ${round(o.service_cost, 2)}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <a href="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        Details </a>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h4>Paid (Status 2)</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order</th>
+                            <th>User</th>
+                            <th>Currency</th>
+                            <th>Payment Type</th>
+                            <th>Item Cost</th>
+                            <th>Service Cost</th>
+                            <th>Total Amount</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 2">
+                                <td>${o.created}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.account_email}</td>
+                                <td>${o.purchase_details.currency_paid}</td>
+                                <td>${o.purchase_details.payment_type} </td>
+                                <td>$ ${round(o.item_total_cost, 2)}</td>
+                                <td>$ ${round(o.service_cost, 2)}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <a href="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        Details </a>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+         <h4>Live Orders (Status 5)</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order</th>
+                            <th>User</th>
+                            <th>Currency</th>
+                            <th>Payment Type</th>
+                            <th>Item Cost</th>
+                            <th>Service Cost</th>
+                            <th>Total Amount</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 5">
+                                <td>${o.created}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.account_email}</td>
+                                <td>${o.purchase_details.currency_paid}</td>
+                                <td>${o.purchase_details.payment_type} </td>
+                                <td>$ ${round(o.item_total_cost, 2)}</td>
+                                <td>$ ${round(o.service_cost, 2)}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <a href="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        Details </a>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <h4>Unpaid (Status 1)</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order</th>
+                            <th>User</th>
+                            <th>Currency</th>
+                            <th>Payment Type</th>
+                            <th>Item Cost</th>
+                            <th>Service Cost</th>
+                            <th>Total Amount</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 1">
+                                <td>${o.created}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.account_email}</td>
+                                <td>${o.purchase_details.currency_paid}</td>
+                                <td>${o.purchase_details.payment_type} </td>
+                                <td>$ ${round(o.item_total_cost, 2)}</td>
+                                <td>$ ${round(o.service_cost, 2)}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <a href="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        Details </a>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+                 <h4>Finished (Status 6)</h4>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order</th>
+                            <th>User</th>
+                            <th>Currency</th>
+                            <th>Payment Type</th>
+                            <th>Item Cost</th>
+                            <th>Service Cost</th>
+                            <th>Total Amount</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <div tal:condition="o.status == 6">
+                                <td>${o.created}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.account_email}</td>
+                                <td>${o.purchase_details.currency_paid}</td>
+                                <td>${o.purchase_details.payment_type} </td>
+                                <td>$ ${round(o.item_total_cost, 2)}</td>
+                                <td>$ ${round(o.service_cost, 2)}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td>
+                                    <a href="/admin/order_details/${o.account_id}:${o.order_id}" method="GET">
+                                        Details </a>
+                                </td>
+                            </div>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

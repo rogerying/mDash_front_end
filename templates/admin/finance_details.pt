@@ -1,0 +1,25 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container">
+            <div class="row upcoming">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+
+
+                    <h1>Finance Details</h1>
+                    <div>
+                        <br>This page will show the details of a client's payments + orders
+                        <br>
+                        
+                    </div>
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

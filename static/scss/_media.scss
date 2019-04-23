@@ -1,0 +1,747 @@
+@media (max-width: 1600px) {
+	
+	.my-account-page {
+		&.my-account-profile-page {
+			.block-for-card:after {
+				border-radius: 20px;
+				filter: blur(5px);
+				left: -10px;
+				right: -10px;
+				top: -20px;
+				bottom: -20px;
+			}
+		}
+	}
+	
+	.payment-page {
+		.block-info-msg {
+			height: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+		.block-cards {
+			margin-bottom: 80px;
+		}
+	}
+	
+	.congratulations-page {
+		padding-bottom: 150px;
+	}
+}
+
+@media (max-width: 991px) {
+	h1 {
+		text-align: center;
+	}
+	.navbar-light .navbar-toggler {
+		color: $color-blue-2;
+		border-color: $color-blue-3;
+		height: 34px;
+		line-height: 34px;
+		padding: 0 8px;
+		width: 40px;
+		
+		.navbar-toggler-icon {
+			background: none;
+			border-bottom: 2px solid $color-blue-2;
+			border-top: 2px solid $color-blue-2;
+			display: inline-block;
+			height: 18px;
+			line-height: 1;
+			margin-top: 8px;
+			position: relative;
+			vertical-align: top;
+			width: 100%;
+			
+			&:before {
+				content: "";
+				border-top: 2px solid $color-blue-2;
+				position: absolute;
+				left: 0;
+				margin-top: -1px;
+				right: 0;
+				top: 50%;
+			}
+		}
+	}
+	.section-page {
+		overflow-x: hidden;
+		
+		.left-menu-content {
+			margin: 0 auto;
+			padding: 0 40px;
+			text-align: center;
+			width: 80%;
+		}
+	}
+	
+	.active-order-page {
+		.bottom-btn {
+			padding-bottom: 30px;
+		}
+	}
+	
+	.section-footer {
+		text-align: center;
+		
+		h4 {
+			padding-top: 30px;
+			
+			&.pl-29 {
+				padding-left: 0;
+			}
+		}
+	}
+	
+	.navbar-collapse {
+		background-color: $color-white;
+		border-top: 1px solid rgba(114, 168, 247, 0.1);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 80px;
+		box-shadow: 0 17px 14px 0 rgba(114, 168, 247, 0.1);
+	}
+	
+	.section-header .navbar-nav {
+		.nav-item {
+			box-sizing: border-box;
+			margin-left: 0 !important;
+			
+			ul {
+				left: 0;
+				position: relative;
+				right: 0;
+				z-index: 0;
+				background: transparent;
+				bottom: auto;
+				top: auto;
+				box-shadow: none;
+				
+				.nav-link-2 {
+					color: $color-blue-5;
+					line-height: 1;
+					text-transform: capitalize;
+				}
+			}
+			
+		}
+		.nav-link {
+			width: 100%;
+		}
+		.separator {
+			height: 2px;
+			width: 90%;
+			margin: 8px auto;
+			display: block;
+		}
+	}
+	
+	.new-order-page.section-page {
+		.left-menu-content {
+			padding-bottom: 30px;
+		}
+	}
+	
+	.my-account-page {
+		.card.card-statistics {
+			margin-top: 30px;
+		}
+		.left-menu-content {
+			margin-bottom: 30px;
+			padding: 0;
+			position: relative;
+			
+			ul {
+				background-color: $color-white;
+				box-shadow: 0 -4px 14px 0 rgba(114, 168, 247, 0.1);
+				display: none;
+				left: 0;
+				position: absolute;
+				padding: 20px;
+				right: 0;
+				z-index: 1;
+				
+				&.open {
+					display: block;
+				}
+				
+				.btn-link {
+					line-height: 34px;
+					text-align: left;
+					text-transform: capitalize;
+					width: 100%;
+				}
+			}
+		}
+		.mobile-left-menu {
+			border-top: 1px solid $color-blue-3;
+			border-bottom: 1px solid $color-blue-3;
+			padding: 10px 0;
+			
+			h4 {
+				margin: 0;
+				padding: 9px 0;
+			}
+		}
+		
+		&.my-account-orders-page {
+			.nav-tabs {
+				padding-left: 0;
+				
+				.nav-link {
+					box-sizing: border-box;
+					padding-left: 3px;
+					padding-right: 3px;
+				}
+			}
+		}
+	}
+	
+	.home-page {
+		.section-1 {
+			.block-1 h1 {
+				text-align: left;
+			}
+			.block-with-info {
+				height: auto !important;
+				margin-bottom: 30px;
+				
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+			
+			.block-3 {
+				.col-lg-3 {
+					&:nth-child(1),
+					&:nth-child(2) {
+						margin-bottom: 40px;
+					}
+				}
+				
+				.home-img-1, .home-img-3 {
+					display: none;
+				}
+				
+				.home-img-2 {
+					padding-top: 30px;
+				}
+			}
+		}
+		
+		.block-item-why, .block-3 .col-lg-3 {
+			height: auto !important;
+		}
+		
+	}
+	
+}
+
+@media (max-width: 630px) {
+	
+	h1 {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+	
+	h3 {
+		font-size: 22px;
+	}
+	
+	h4 {
+		font-size: 18px;
+	}
+	
+	h5 {
+		font-size: 14px;
+	}
+	
+	.congratulations-page {
+		
+		.top-block {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 20px;
+			
+			.top-info-block {
+				padding: 20px;
+			}
+			
+			h1 {
+				font-size: 30px;
+			}
+			h3 {
+				font-size: 22px;
+				img {
+					width: 128px;
+				}
+			}
+			
+			.text-left p {
+				font-size: 15px;
+				margin-bottom: 16px;
+			}
+			
+		}
+		
+		.bottom-block,
+		.middle-text {
+			box-sizing: border-box;
+			padding: 20px;
+			
+			p {
+				font-size: 14px;
+			}
+		}
+		
+		.white-block {
+			box-sizing: border-box;
+			padding: 27px 20px;
+			max-width: 100%;
+		}
+	}
+	
+	.block-for-table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+	
+	.btn.btn-submit.btn-card-edit {
+		padding: 0;
+		width: 32px;
+		font-size: 0;
+		margin: 0;
+		position: relative;
+		
+		&:before {
+			content: "\f2b0";
+			font: normal normal normal 16px/1 LineAwesome;
+			font-size: inherit;
+			text-decoration: inherit;
+			text-rendering: optimizeLegibility;
+			text-transform: none;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			position: absolute;
+			font-size: 20px;
+			color: $color-white;
+			left: 0;
+			right: 0;
+			top: 5px;
+		}
+	}
+	
+	.card {
+		.card-header {
+			font-size: 18px;
+			height: auto;
+			letter-spacing: -0.4px;
+			line-height: 32px;
+			min-height: 48px;
+			padding: 8px 20px;
+		}
+		
+		.card-body {
+			padding: 20px 10px;
+		}
+		
+	}
+	
+	.block-info-msg {
+		max-width: 100%;
+		margin-bottom: 20px;
+		display: table;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.section-page .nav-tabs .nav-item {
+		border-radius: 5px 5px 0 0;
+		margin-right: 3px;
+		width: calc(33.33% - 2px);
+		
+		.nav-link {
+			border-radius: 5px 5px 0 0;
+			font-size: 12px;
+			height: 32px;
+			line-height: 32px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 100%;
+		}
+	}
+	
+	.bottom-section {
+		padding: 0;
+	}
+	
+	.block-pagination {
+		& + .results {
+			position: relative;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			padding-top: 20px;
+		}
+	}
+	
+	.section-page-content {
+		padding-top: 30px;
+	}
+	
+	.section-footer {
+		padding-bottom: 30px;
+		padding-top: 70px;
+		
+		h4 {
+			font-size: 16px;
+			padding-bottom: 20px;
+		}
+		
+		p {
+			font-size: 12px;
+		}
+		
+		.copyright span {
+			display: block;
+		}
+	}
+	
+	.section-page {
+		.left-menu-content {
+			padding: 0;
+			width: 100%;
+		}
+	}
+	
+	.payment-page {
+		.card-3 {
+			.top-info {
+				padding: 0;
+				max-width: 100%;
+				display: block;
+				
+				.blue-text {
+					float: none !important;
+					text-align: left !important;
+					width: 100%;
+					
+					&.float-right {
+						padding-bottom: 20px;
+					}
+				}
+			}
+			.card-body {
+				padding-top: 20px;
+			}
+		}
+		
+		.card.card-promotions {
+			.block-activate h3 {
+				display: inline-block;
+				padding-top: 5px;
+				vertical-align: top;
+				padding-right: 15px;
+			}
+		}
+		.block-cards {
+			margin-bottom: 50px;
+		}
+		.block-info-msg {
+			max-width: 100%;
+			margin-bottom: 20px;
+			display: table;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+	}
+	
+	.active-order-page {
+		.bottom-btns .btn.btn-green-blue {
+			margin-bottom: 20px;
+		}
+		
+		.card-3 {
+			.card-body {
+				padding: 20px 10px;
+			}
+			
+			.block-info {
+				padding-left: 0;
+				
+				.float-right,
+				.float-left {
+					float: none !important;
+				}
+				
+				.block-right {
+					float: right;
+				}
+				
+				.float-right span:not(.block-right) {
+					display: block;
+					width: 100%;
+				}
+				.btn-select {
+					float: right;
+				}
+			}
+			
+			.top-info {
+				padding: 0;
+				max-width: 100%;
+				display: block;
+				
+				.blue-text {
+					float: none !important;
+					text-align: left !important;
+					width: 100%;
+					
+					&.float-right {
+						padding-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+	
+	.new-order-page.section-page {
+		.left-menu-content {
+			padding-bottom: 30px;
+		}
+		
+		.btn.btn-submit.btn-conf {
+			width: 100%;
+		}
+		
+		.block-step {
+			padding-bottom: 40px;
+		}
+		
+		.block-for-search {
+			padding: 0;
+			
+			.form-group {
+				margin-bottom: 20px;
+				margin-right: 0;
+				width: 100%;
+			}
+			
+			.btn-grey {
+				margin-bottom: 20px;
+				width: 100%;
+			}
+		}
+		.card-body-special-request .block-for-search .form-for-search {
+			.form-group {
+				margin-bottom: 20px;
+				margin-right: 0;
+				width: 100%;
+			}
+			.btn-green {
+				margin-bottom: 20px;
+				width: 100%;
+			}
+		}
+		
+		.table {
+			margin-top: 0;
+		}
+		
+		.card-2 h3 {
+			font-size: 18px;
+		}
+		
+		.card-3 {
+			.top-info {
+				padding: 0;
+				max-width: 100%;
+				display: block;
+				
+				.blue-text {
+					float: none !important;
+					text-align: left !important;
+					width: 100%;
+					
+					&.float-right {
+						padding-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+	
+	.my-account-page {
+		
+		&.my-account-profile-page {
+			.card.card-1 {
+				.top-info {
+					padding: 0 20px;
+				}
+				.bottom-info {
+					padding: 20px 20px 0;
+				}
+				
+				.btn-grey {
+					width: 100%;
+				}
+			}
+			
+			.bottom-btn .block-info-msg {
+				max-width: 100%;
+			}
+		}
+		
+		&.my-account-orders-page {
+			.nav-tabs .nav-item {
+				width: calc(25% - 3px);
+			}
+			.table {
+				margin-top: 0;
+			}
+		}
+		
+		h1 span {
+			font-size: 20px;
+			padding-left: 0;
+		}
+		
+		.card {
+			
+			.card-body {
+				padding: 20px 10px;
+			}
+			
+			&.card-1 {
+				.top-info {
+					padding: 0;
+					max-width: 100%;
+					display: block;
+					
+					p {
+						margin-bottom: 10px;
+					}
+					
+					.blue-text, .float-right {
+						float: none !important;
+						text-align: left !important;
+						width: 100%;
+					}
+					
+					.float-right {
+						padding-bottom: 20px;
+					}
+				}
+			}
+			&.card-statistics .card-body {
+				padding: 20px 20px 10px;
+			}
+		}
+	}
+	.home-page {
+		.section-1 {
+			.block-1 {
+				min-height: 0;
+				
+				h1 {
+					font-size: 40px;
+				}
+				h3 {
+					font-size: 25px;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 14px;
+					padding-bottom: 16px;
+				}
+				
+				img {
+					position: relative;
+					bottom: auto;
+					right: auto;
+					max-width: 100%;
+					height: 150px;
+					margin: 60px auto 0;
+				}
+			}
+		}
+		.section-2 .title {
+			font-size: 36px;
+			margin-bottom: 28px;
+		}
+		.section-3 {
+			padding-top: 48px;
+			padding-bottom: 66px;
+			
+			.title {
+				font-size: 36px;
+				margin-bottom: 28px;
+			}
+			
+			h4 {
+				font-size: 25px;
+				margin-bottom: 22px;
+			}
+			
+			.all-info .block-input .form-group {
+				margin-right: 0;
+				width: 100%;
+			}
+		}
+	}
+	.section-popup {
+		.block-popup {
+			padding: 16px;
+			
+			p {
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+			.title {
+				padding-bottom: 22px;
+			}
+			.block-btns .btn {
+				margin: 0;
+				width: 100%;
+				
+				&.btn-red {
+					margin-left: 0;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	
+	.section-page .nav-tabs .nav-item {
+		.nav-link {
+			font-size: 8px;
+		}
+	}
+	
+	
+	.congratulations-page {
+		.top-block {
+			h1 {
+				font-size: 24px;
+			}
+			h3 {
+				font-size: 18px;
+			}
+		}
+	}
+	
+	.payment-page .btn.btn-submit.btn-conf {
+		padding: 0;
+		width: 100%;
+	}
+}

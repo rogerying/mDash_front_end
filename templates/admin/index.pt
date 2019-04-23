@@ -1,0 +1,123 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <h1 class="h3 mb-2 text-gray-800">Dashboard</h1>
+        <p class="mb-4">Most recent registered accounts</p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="exists: accounts">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>E-mail</th>
+                            <th>Register Date</th>
+                            <th>Tel</th>
+                            <th>Total Orders</th>
+                            <th>Outstanding Orders</th>
+                            <th>Processing Orders</th>
+                            <th>Finished Orders</th>
+                            <th>Total Paid</th>
+                            <th>Outstanding Payments</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="a accounts">
+                            <td>${a.email}</td>
+                            <td>${a.created}</td>
+                            <td>${a.telephone}</td>
+                            <td>${a.total_orders}</td>
+                            <td>${a.total_outstanding}</td>
+                            <td>${a.total_processing}</td>
+                            <td>${a.total_finished}</td>
+                            <td>$ ${a.total_payments}</td>
+                            <td>$ ${a.outstanding_payments}</td>
+                            <td><a href="/admin/account_details/${a.user_id}">Details</a></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <p class="mb-4">Most recent 5 Orders</p>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="exists: orders">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Created</th>
+                            <th>Item</th>
+                            <th>Total Links</th>
+                            <th>Used Links</th>
+                            <th>Order ID</th>
+                            <th>Order Status</th>
+                            <th>Item_cost</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="o orders">
+                            <td>${o.created}</td>
+                            <td>${o.item}</td>
+                            <td>${o.total_links}</td>
+                            <td>${o.used_links}</td>
+                            <td>${o.order_id}</td>
+                            <td>${o.status}</td>
+                            <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                            <td><a href="/admin/order_details/${o.account_id}:${o.order_id}">Order Details</a></td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <p class="mb-4">Most recent 5 Transactions</p>
+        <div class="card shadow mb-4">
+            <div class="card-body" tal:condition="exists: transactions">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Account e-mail</th>
+                            <th>Amount Paid</th>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr tal:repeat="t transactions">
+                            <td>${t.payment_date}</td>
+                            <td>${t.account_email}</td>
+                            <td>${t.currency_paid} ${t.amount_paid}</td>
+                            <td>${t.item}</td>
+                            <td>${t.item_quantity}</td>
+                            <td><a href="/admin/order_details/${t.account_id}:${t.order_id}">Details</a></td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+

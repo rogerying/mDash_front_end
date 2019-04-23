@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en-us" metal:define-macro="layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Roger Ying">
+    <link rel="shortcut icon"
+          href="/static/img/fav.png?cacheId=${view.build_cache_id('/static/img/fav.png')}">
+
+    <title>mDash AI</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
+	<link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link href="/static/bootstrap-4.0.0-dist/css/bootstrap.css" rel="stylesheet">
+	<link href="/static/scss/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+
+
+
+
+    <!-- Custom styles for this scaffold -->
+
+
+    <!-- Styles for Plugins -->
+
+    <div metal:define-slot="additional_css"></div>
+
+</head>
+
+<body>
+
+
+<!-- Header -->
+
+<header class="section-header">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="/">
+				<img src="/static/img/mdash_logo_color.png" srcset="/static/img/mdash_logo_color@2x.png 2x, /static/img/mdash_logo_color@3x.png 3x" />
+            </a> <p>Private Beta</p>
+
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="/home/trynow">Try it now!</a>
+					</li>
+					<li class="nav-item">
+						<div class="nav-link">Features</div>
+
+						<ul>
+							<li>
+								<a href="/home/about" class="nav-link-2">About Us</a>
+							</li>
+							<li>
+								<a href="#" class="nav-link-2">Watch Demo</a>
+							</li>
+							<li>
+								<a href="#" class="nav-link-2">Comparison</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+
+
+					<li class="nav-item">
+						<span class="separator"></span>
+					</li>
+
+                    <li class="nav-item" tal:condition="view.logged_in_user_id">
+                        <a class="nav-link" href="/account">Account</a>
+                    </li>
+                    <li class="nav-item" tal:condition="view.logged_in_user_id">
+                        <a class="nav-link" href="/account/logout">Logout</a>
+                    </li>
+					<li class="nav-item" tal:condition="not view.logged_in_user_id">
+						<a class="nav-link" href="/account/register">Signup</a>
+					</li>
+					<li class="nav-item" tal:condition="not view.logged_in_user_id">
+                        <a class="nav-link" href="/account/signin">Login</a>
+                    </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+<!--?<div class="header-spacer"></div>-->
+
+<!-- ... End Header -->
+
+
+<!-- ... Main content -->
+
+
+    <div metal:define-slot="main_content"></div>
+
+<!-- Footer -->
+
+<footer class="section-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<div class="top-block-logo">
+					<a href="#" class="btn btn-link btn-logo">
+						<img src="/static/img/mdash_logo_white.png" srcset="/static/img/mdash_logo_white@2x.png 2x, /static/img/mdash_logo_white@3x.png 3x" />
+					</a>
+				</div>
+				<div class="row">
+					<p class="col-12 col-lg-9">
+						We created this website because global gifting is so hard! Giving away freebies,
+                        lacks engagement with your customers – so give them a digital REAL GIFT and keep
+                        track of your potential clients!  It’s as easy as sending them a link!
+						<a href="/home/about" class="btn btn-link green">Learn more about mDash.</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<h4>Navigate</h4>
+						<ul class="links">
+							<li>
+								<a href="/home" class="btn btn-link">Home</a>
+							</li>
+							<li>
+								<a href="/home/about" class="btn btn-link">About</a>
+							</li>
+							<li>
+								<a href="/home/trynow" class="btn btn-link">Try it now!</a>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link">Features</a>
+							</li>
+							<li>
+								<a href="#" class="btn btn-link">Pricing</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6">
+						<h4 class="pl-29">Contact us</h4>
+						<ul class="links">
+							<li>
+								<a href="tel:1-800-MDASH-SUPPORT" class="btn btn-link"><img src="/static/img/phone.png" srcset="/static/img/phone@2x.png 2x, /static/img/phone@3x.png 3x" /> 1-800-MDASH-SUPPORT</a>
+							</li>
+							<li>
+								<a href="mailto:support@mdash.ai" class="btn btn-link"><img src="/static/img/email.png" srcset="/static/img/email@2x.png 2x, /static/img/email@3x.png 3x" /> support@mdash.ai</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="copyright text-center">Copyright <i class="la la-copyright"></i> 2019 <span>mDash Al Technologies inc.</span></div>
+</footer>
+
+
+<!-- End Footer -->
+
+<!-- Send Message Popup -->
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--?<script src="/static/bower_components/jquery-dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery-dist/jquery.min.js')}"></script>-->
+<script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
+
+    <!-- jQuery-scripts for Template -->
+
+    <script src="/static/js/main.js"></script>
+
+    <!-- Used SVG-icons -->
+
+
+    <!-- ... end Used SVG-icons -->
+
+
+    <div metal:define-slot="additional_js"></div>
+
+</body>
+</html>

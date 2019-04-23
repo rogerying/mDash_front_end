@@ -1,0 +1,29 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container">
+            <div class="row upcoming">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h1>Claim Success</h1>
+
+                    <div><br> Congratulations on Claiming your gift, an e-mail will arrive shortly!
+                        <br>Instructions: In the e-mail will be a special link, once clicked, claim your gift through
+                        <br>Amazon by providing your amazon account or registering a new one.
+                        <br>You can then send your item to any address you wish!
+                        <br>Learn more how you TOO can also send link gifts to friends!
+                        <br><br>
+                        <br>Share your hopefully awesome experience on: Twitter, Facebook, etc....
+                        <br>
+                        <br>REGISTER NOW with this e-mail and get 15 free links!
+                    </div>
+                    <br>TEMPORARY TEST: check out <a href="/links/redeem_landpage/${redeem_page_link}"
+                    >Redeem Page</a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

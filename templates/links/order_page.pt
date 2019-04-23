@@ -1,0 +1,274 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <section class="section-page payment-page">
+            <div class="section-page-content">
+                <div class="container">
+                    <h1>Payment</h1>
+
+                    <div class="block-steps">
+
+                        <div class="row block-step">
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+                                    <h3>Overview,
+                                        Promotions &
+                                        Payment</h3>
+                                    <h5>Select any promotions and one of various methods of payment</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-9 right-content">
+                                <div class="card card-3">
+                                    <div class="card-header">
+                                        Overview
+                                        <a href="#" class="btn btn-submit btn-card-edit float-right">Edit</a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4>This is the product you’ve selected</h4>
+
+                                        <div class="top-info">
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">AMAZON COUNTRY</p>
+                                                <p class="blue-text float-right">${country}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">LINK / PRODUCT QUANTITY</p>
+                                                <p class="blue-text float-right">${item_quantity}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">PRODUCT NAME</p>
+                                                <p class="blue-text float-right">${item}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">ASIN #</p>
+                                                <p class="blue-text float-right">${asin}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">AMAZON PAGE</p>
+                                                <p class="blue-text float-right"><a href="${order_url}"
+                                                                                    target="_blank">${order_url}</a></p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">LIST PRICE</p>
+                                                <p class="blue-text float-right">${currency} ${item_price}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">PRIME</p>
+                                                <p class="blue-text float-right">{order_type}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">mDASH PRICE</p>
+                                                <p class="blue-text float-right">${currency} ${item_price}</p>
+                                            </div>
+                                        </div>
+                                        <div class="bottom-info">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-5 ml-auto">
+                                                    <div class="row">
+                                                        <p class="col-6 blue-text">Total Order Cost</p>
+                                                        <p class="col-6 grey-text">${currency} ${item_total_cost}</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p class="col-6 blue-text">Service Fee</p>
+                                                        <p class="col-6 grey-text">${currency} ${service_cost}</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p class="col-6 blue-text">Total Cost</p>
+                                                        <p class="col-6 grey-text">${currency} ${total_order_price}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--?                               PROMOTIONS               -->
+
+                                <div class="card card-3 card-promotions">
+                                    <div class="card-header">Promotions</div>
+                                    <div class="card-body">
+                                        <h4>Take advantage of these promotions</h4>
+
+                                        <div class="top-info">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6 text-center">
+                                                    <div class="code"><span>5 Free Links</span></div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 block-activate text-center">
+                                                    <h3>Activate</h3>
+                                                    <span class="block-checkbox-slider">
+												<input type="checkbox" id="checkbox_1" class="checkbox"
+                                                       checked="checked"/>
+												<label for="checkbox_1"></label>
+											</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bottom-info">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-5 ml-auto">
+
+                                                    <div class="row">
+                                                        <p class="col-7 blue-text">Updated Total</p>
+                                                        <p class="col-5 grey-text">$9,037 [TEST]</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--?                               CHECKOUT               -->
+                                <div class="block-cards">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="most_popular-tab" data-toggle="tab"
+                                               href="#most_popular" role="tab" aria-controls="most_popular"
+                                               aria-selected="true">Credit Card</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="search-tab" data-toggle="tab" href="#search"
+                                               role="tab" aria-controls="search" aria-selected="false">Wire Transfer</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="special_request-tab" data-toggle="tab"
+                                               href="#special_request" role="tab" aria-controls="special_request"
+                                               aria-selected="false">Other</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane  show active" id="most_popular" role="tabpanel"
+                                             aria-labelledby="most_popular-tab">
+                                            <div class="card">
+                                                <div class="card-header">Stripe Checkout</div>
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label>Cardholder’s name</label>
+                                                        <input type="text" class="form-control" placeholder=""
+                                                               value=""/>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-5">
+                                                            <div class="form-group">
+                                                                <label>Card number</label>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                       value=""/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-4">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label>Exp. Mo</label>
+
+                                                                        <div class="block-custom-select">
+                                                                            <input type="text" class="form-control"
+                                                                                   value=""/>
+                                                                            <div class="active-selected"></div>
+                                                                            <div class="block-items">
+                                                                                <div class="item">1</div>
+                                                                                <div class="item">2</div>
+                                                                                <div class="item">3</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label>Exp. Yr</label>
+
+                                                                        <div class="block-custom-select">
+                                                                            <input type="text" class="form-control"
+                                                                                   value=""/>
+                                                                            <div class="active-selected"></div>
+                                                                            <div class="block-items">
+                                                                                <div class="item">1</div>
+                                                                                <div class="item">2</div>
+                                                                                <div class="item">3</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-3">
+                                                            <div class="form-group">
+                                                                <label>CVV</label>
+                                                                <input type="text" class="form-control" placeholder=""
+                                                                       value=""/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="clearfix block-btn">
+                                                        <div class="block-info-msg error">
+                                                            <i class="la la-close red"></i>
+                                                            <span>Oops! The information above was not accepted. Please update and try again.</span>
+                                                            <i class="fa fa-close grey"></i>
+                                                        </div>
+                                                        <div class="block-info-msg confirmed d-none">
+                                                            <i class="la la-check"></i>
+                                                            <span>Confirmed!</span>
+                                                            <i class="fa fa-close grey"></i>
+                                                        </div>
+                                                        <form action="/links/order_page_test" method="POST">
+                                                        <button class="btn btn-submit btn-green float-right d-none btn-conf">
+                                                            Test Purchase
+                                                        </button>
+                                                        <button class="btn btn-submit btn-grey float-right btn-conf">
+                                                            Test Purchase
+                                                        </button>
+                                                        </form>
+                                                        <form action="/purchase/stripe_credit_complete/${order_id}"
+                                                              method="POST">
+                                                            <script
+                                                                    src="https://checkout.stripe.com/checkout.js"
+                                                                    class="stripe-button"
+                                                                    data-key="pk_test_VzBwJdk9YDJXKW0deEEydryq"
+                                                                    data-amount="${total_order_price*100}"
+                                                                    data-currency="${currency}"
+                                                                    data-name="mDash AI Technologies"
+                                                                    data-label="Pay for Order of ${currency} ${total_order_price}"
+                                                                    data-allow-remember-me="true"
+                                                                    data-description="Order #: ${order_id}"
+                                                                    data-image="/static/img/logo.png"
+                                                                    data-locale="auto">
+                                                            </script>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane " id="search" role="tabpanel" aria-labelledby="search-tab">
+                                            <div class="card">
+                                                <div class="card-header">Wire Transfer</div>
+                                                <div class="card-body">
+                                                    <span>This will be the details of your wire transfer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane " id="special_request" role="tabpanel"
+                                             aria-labelledby="special_request-tab">
+
+                                            <div class="card">
+                                                <div class="card-header">Other</div>
+                                                <div class="card-body">
+                                                    <span>This will be the details of other types of payment</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>

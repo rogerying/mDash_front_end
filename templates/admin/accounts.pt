@@ -1,0 +1,59 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div>
+
+            <!-- Begin Page Content -->
+
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">Accounts</h1>
+            <p class="mb-4">Below are all the registered accounts</p>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>E-mail</th>
+                                <th>Register Date</th>
+                                <th>Tel</th>
+                                <th>Total Orders</th>
+                                <th>Outstanding Orders</th>
+                                <th>Processing Orders</th>
+                                <th>Finished Orders</th>
+                                <th>Total Paid</th>
+                                <th>Outstanding Payments</th>
+                                <th>Details</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr tal:repeat="a accounts">
+                                <td>${a.email}</td>
+                                <td>${a.created}</td>
+                                <td>${a.telephone}</td>
+                                <td>${a.total_orders}</td>
+                                <td>${a.total_outstanding}</td>
+                                <td>${a.total_processing}</td>
+                                <td>${a.total_finished}</td>
+                                <td>$ ${a.total_payments}</td>
+                                <td>$ ${a.outstanding_payments}</td>
+                                <td><a href="/admin/account_details/${a.user_id}">Details</a></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+

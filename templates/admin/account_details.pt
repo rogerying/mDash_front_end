@@ -1,0 +1,109 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <div>
+
+            <!-- Begin Page Content -->
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <!-- Page Heading -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Your account ${user_id}</h6>
+                        </div>
+                        <div class="card-body">
+                            Name: ${name}
+                            <br>Login / E-mail: ${email}
+                            <br>Telephone: ${telephone}
+                            <br>Address: ${address}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <!-- Page Heading -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
+
+                        </div>
+                        <div class="card-body">
+                            Total Orders: ${total_orders}
+                            <br>Total Outstanding orders: ${total_outstanding}
+                            <br>Total Finished Orders: ${total_finished}
+                            <br>Total Processing: ${total_processing}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+
+                    <!-- Page Heading -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Finances</h6>
+
+                        </div>
+                        <div class="card-body">
+                            Total Paid: ${total_payments}
+                            <br>Total Unpaid: ${outstanding_payments}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h3>Orders</h3>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-body" tal:condition="exists: orders">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Created</th>
+                                <th>Item</th>
+                                <th>Total Links</th>
+                                <th>Used Links</th>
+                                <th>Order ID</th>
+                                <th>Order Status</th>
+                                <th>Item_cost</th>
+                                <th>Service_cost</th>
+                                <th>Total cost</th>
+                                <th>Details</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr tal:repeat="o orders">
+                                <td>${o.created}</td>
+                                <td>${o.item}</td>
+                                <td>${o.total_links}</td>
+                                <td>${o.used_links}</td>
+                                <td>${o.order_id}</td>
+                                <td>${o.status}</td>
+                                <td>$ ${round(o.item_total_cost,2)}</td>
+                                <td>$ ${round(o.service_cost, 2)}</td>
+                                <td>$ ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                <td><a href="/admin/order_details/${user_id}:${o.order_id}">Order Details</a></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

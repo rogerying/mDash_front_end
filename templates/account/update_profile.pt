@@ -1,0 +1,209 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <section class="section-page my-account-page my-account-profile-page">
+            <div class="section-page-content">
+                <div class="container">
+                    <h1>My Account <span>> Profile</span></h1>
+
+                    <div class="block-steps">
+
+                        <div class="row block-step">
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+
+                                    <div class="mobile-left-menu d-lg-none clearfix navbar-light">
+                                        <h4 class="float-left">Menu</h4>
+                                        <div class="navbar-toggler float-right"><span
+                                                class="navbar-toggler-icon"></span></div>
+                                    </div>
+
+                                    <ul>
+                                        <li>
+                                            <a href="/account" class="btn btn-link">Overview</a>
+                                        </li>
+                                        <li>
+                                            <a href="/account/update_profile" class="btn btn-link active">Profile</a>
+                                        </li>
+                                        <!--?								<li>-->
+                                        <!--?									<a href="#" class="btn btn-link">Statistics</a>-->
+                                        <!--?								</li>-->
+                                        <li>
+                                            <a href="#" class="btn btn-link">Orders</a>
+                                        </li>
+                                        <li>
+                                            <a href="/links/new_linksorder" class="btn btn-submit btn-green">Start A New
+                                                Dash</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-9 right-content">
+
+                                <div class="block-for-card">
+                                    <div class="card card-1">
+                                        <div class="card-header">
+                                            Profile
+                                            <a href="#" class="btn btn-submit btn-card-edit float-right">Edit</a>
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="top-info">
+                                                <div class="clearfix">
+                                                    <p class="blue-text float-left">NAME</p>
+                                                    <p class="float-right">[Update Below] ${name}</p>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <p class="blue-text float-left">COMPANY</p>
+                                                    <p class="float-right">[Update Below] ${name}</p>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <p class="blue-text float-left">TELEPHONE</p>
+                                                    <p class="float-right">[Update Below] ${telephone}</p>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <p class="blue-text float-left">EMAIL</p>
+                                                    <p class="float-right">TEST ${email}</p>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <p class="blue-text float-left">ADDRESS</p>
+                                                    <p class="float-right">[Update Below] ${address}</p>
+                                                </div>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <form action="" method="POST" class="row">
+                                                    <div class="col-12 col-sm-6">
+                                                        <div class="form-group">
+                                                            <form action="" method="POST">
+                                                            <label>First Name</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Last Name</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Company</label>
+                                                            <input name="name" type="text" class="form-control" placeholder=""
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group form-group-telephone">
+                                                            <label>Telephone</label>
+
+                                                            <div class="clearfix">
+                                                                <div class="block-custom-select">
+                                                                    <input type="text" class="form-control" value="en"/>
+                                                                    <div class="active-selected">
+                                                                        <span>en</span>
+                                                                        <img src="/static/img/lang.png"/>
+                                                                    </div>
+                                                                    <div class="block-items">
+                                                                        <div class="item active">
+                                                                            <span>en</span>
+                                                                            <img src="/static/img/lang.png"/>
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <span>en 1</span>
+                                                                            <img src="/static/img/lang.png"/>
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <span>en 2</span>
+                                                                            <img src="/static/img/lang.png"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <input name="telephone" type="text" class="form-control" placeholder=""
+                                                                       value=""/>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>Address Line 1</label>
+                                                            <input name="address" type="text" class="form-control"
+                                                                   placeholder="Street address, P.O. box, company, c/o …"
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Address Line 2</label>
+                                                            <input type="text" class="form-control"
+                                                                   placeholder="Apartment, suite, unit, building, floor …"
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>City / Town</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>State / Province / Region</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Zip / Postal Code</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                   value=""/>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Country</label>
+
+                                                            <div class="block-custom-select">
+                                                                <input type="text" class="form-control" value=""/>
+                                                                <div class="active-selected"></div>
+                                                                <div class="block-items">
+                                                                    <div class="item">Country 1</div>
+                                                                    <div class="item">Country 2</div>
+                                                                    <div class="item">Country 3</div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 bottom-btn">
+                                                        <div class="block-info-msg error" tal:condition="error">
+                                                            <i class="la la-close red"></i>
+                                                            <span>${error}</span>
+                                                            <i class="fa fa-close grey"></i>
+                                                        </div>
+                                                        <button type="submit"
+                                                                class="btn btn-submit btn-grey float-right">Update
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+</div>

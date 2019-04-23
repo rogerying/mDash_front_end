@@ -1,0 +1,126 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <section class="section-page congratulations-page">
+            <div class="section-page-content">
+                <div class="container">
+                    <div class="block-with-info">
+
+                        <div class="top-block">
+                            <div class="top-info-block">
+                                <h1>Congratulations!</h1>
+                                <h3>You’ve been gifted a product by ${name} <img src="/static/img/spotify.png"/></h3>
+
+                                <div class="text-left" tal:condition="not personalized_message">
+                                    <p>We’re so appreciative of your continued use and feedback. It makes a HUGE
+                                        difference.</p>
+                                    <p>Please accept this gift as our thankyou to you.</p>
+                                    <p>Enjoy!</p>
+                                    <p>Michael Sanchez,<br/>
+                                        Customer Success Specialst.</p>
+                                </div>
+                                <div class="text-left" tal:condition="personalized_message">
+                                    <p>${personalized_message}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="middle-text">
+                            <h4>The gift: ${item}  <br> Check out: <a href="${order_url}"
+                                                                      target="_blank">${order_url}</a></h4>
+                            <p>Enter your information below to claim your gift!</p>
+                        </div>
+                        <div class="white-block">
+                            <form action="/links/claim_gift/${order_id}" method="POST">
+
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <label>First Name</label>
+                                                    <input name="client_name" type="text" class="form-control" placeholder="" value=""/>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <label>Last Name</label>
+                                                    <input name="last_name" type="text" class="form-control" placeholder="" value=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="form-group form-group-telephone">
+                                                    <label>Telephone</label>
+
+                                                    <div class="clearfix">
+                                                        <div class="block-custom-select">
+                                                            <input type="text" class="form-control" value="en"/>
+                                                            <div class="active-selected">
+                                                                <span>en</span>
+                                                                <img src="/static/img/lang.png"/>
+                                                            </div>
+                                                            <div class="block-items">
+                                                                <div class="item active">
+                                                                    <span>en</span>
+                                                                    <img src="/static/img/lang.png"/>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <span>en 1</span>
+                                                                    <img src="/static/img/lang.png"/>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <span>en 2</span>
+                                                                    <img src="/static/img/lang.png"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <input name="client_telephone" type="text" class="form-control" placeholder=""
+                                                               value=""/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input name="client_email" type="email" class="form-control" placeholder="" value=""/>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+
+                                                <div class="form-group" tal:condition="redeem_code">
+                                                    <label>Redeem code (if applicable)</label>
+                                                    <input name="client_redeem_code" required
+                                                           type="text" class="form-control" placeholder="" value=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="block-btn">
+                                    <a href="#" class="btn btn-submit btn-purp">Accept Gift</a>
+                                    <p>Pressing this button will send an e-mail with the link to redeem your Amazon
+                                        gift!</p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="bottom-block">
+                            <p class="text-right">
+                                To learn how you can share gifts<br/>
+                                as easily as this, visit <a href="#" class="btn btn-link">our website</a> !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+</div>

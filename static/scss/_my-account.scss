@@ -1,0 +1,270 @@
+.my-account-page {
+
+	h1 {
+		span {
+			font-size: 30px;
+			padding-left: 10px;
+		}
+	}
+	
+	.left-menu-content {
+		ul {
+			font-size: 0;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.btn-link {
+				color: $color-grey-1;
+				font-family: $font-SFUIText;
+				font-size: 14px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 64px;
+				letter-spacing: 0.8px;
+				margin: 0;
+				position: relative;
+				text-transform: uppercase;
+				transition: $transition-speed;
+				
+				&:before {
+					content: '';
+					width: 2px;
+					height: 24px;
+					background-color: $color-blue-3;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					margin-top: -12px;
+					opacity: 0;
+					transition: $transition-speed;
+				}
+				
+				&.active {
+					color: $color-blue-3;
+					padding-left: 18px;
+					
+					&:before {
+						opacity: 1;
+					}
+				}
+				
+				&:hover {
+					color: $color-blue-3;
+					padding-left: 18px;
+				}
+			}
+			
+			.btn-green {
+				line-height: 48px;
+				margin-top: 9px;
+				padding: 0;
+				width: 155px;
+			}
+		}
+	}
+	
+	.mb-50 {
+		margin-bottom: 50px;
+	}
+	
+	.card {
+		.card-body {
+			padding: 37px 30px 2px;
+		}
+		
+		&.card-1 {
+			height: 100%;
+			
+			.top-info {
+				p {
+					font-size: 12px;
+					margin-bottom: 20px;
+				}
+				
+				.blue-text {
+					text-transform: uppercase;
+				}
+				
+				.float-right {
+					text-align: right;
+				}
+			}
+		}
+		
+		&.card-statistics {
+			height: 100%;
+			
+			.card-body {
+				font-size: 0;
+				padding: 30px 60px 38px;
+				text-align: center;
+			}
+			
+			.block-info {
+				box-sizing: border-box;
+				display: inline-block;
+				
+				h5 {
+					color: $color-blue-10;
+					font-family: $font-SFUIText;
+					font-size: 40px;
+					font-weight: 900;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: -0.6px;
+					margin: 0;
+					padding-bottom: 7px;
+				}
+				
+				p {
+					color: $color-blue-6;
+					font-family: $font-helvetica;
+					font-size: 15px;
+					font-weight: bold;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: -0.3px;
+					margin: 0;
+				}
+				
+				&.top {
+					border-bottom: solid 1px #979797;
+					width: 100%;
+					
+					h5 {
+						font-size: 60px;
+					}
+					
+					p {
+						padding-bottom: 22px;
+					}
+				}
+				&.left {
+					border-right: solid 1px #979797;
+					padding: 14px 0 10px 14px;
+					width: 50%;
+				}
+				&.right {
+					padding: 14px 14px 10px 0;
+					width: 50%;
+				}
+			}
+		}
+		
+		&.card-incomplete-orders {
+			.card-body {
+				padding: 27px 10px 40px;
+			}
+			
+			.table {
+				margin-top: 0;
+			}
+		}
+	}
+	
+	&.my-account-orders-page {
+		padding-bottom: 100px;
+		
+		.card-body {
+			padding: 27px 10px 40px;
+		}
+		
+		.nav-tabs {
+			padding-left: 68px;
+			
+			.nav-item {
+				width: calc(25% - 23px);
+			}
+		}
+		
+		.table {
+			margin-top: 0;
+		}
+	}
+	
+	&.my-account-profile-page {
+		.form-group {
+			label {
+				box-sizing: border-box;
+				padding-left: 10px;
+			}
+		}
+		
+		.top-info {
+			padding: 0 98px 80px;
+		}
+		
+		.bottom-info {
+			border-top: 1px solid $color-blue-3;
+			padding: 50px 98px 0;
+		}
+		
+		.card .card-body {
+			padding: 37px 0 60px;
+		}
+		
+		.bottom-btn {
+			.block-info-msg {
+				max-width: calc(100% - 225px);
+			}
+		}
+		
+		.block-for-card {
+			&:before {
+				background-color: rgba(58, 58, 58, 0.9);
+				display: none;
+				bottom: 0;
+				content: '';
+				left: 0;
+				opacity: 0;
+				position: fixed;
+				right: 0;
+				top: 0;
+				transition: $transition-speed;
+				z-index: 9999;
+			}
+			&:after {
+				background-color: $color-white;
+				display: none;
+				content: '';
+				border-radius: 60px;
+				-webkit-filter: blur(10px);
+				filter: blur(10px);
+				position: absolute;
+				left: -60px;
+				right: -60px;
+				top: -60px;
+				bottom: -60px;
+				z-index: 9999;
+				opacity: 0;
+				transition: $transition-speed;
+			}
+			
+			&.active {
+				&:before {
+					display: block;
+					opacity: 1;
+				}
+				&:after {
+					display: block;
+					opacity: 1;
+				}
+				
+				.card{
+					z-index: 99999;
+				}
+				
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,42 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <div class="container">
+            <div class="row upcoming">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h1>Redeem your gift now!</h1>
+
+                    <div><br> (this could also be a redeem e-mail + link to redeem_page)
+                        <br>
+                        <br> Dear ${client_name} with ${client_email}
+                        <br> You may now redeem your gift
+                        <br>
+                        <div class="error-msg" tal:condition="error">
+                                ${error}</div>
+                        <br>Item: ${item}
+                        <br>
+                        <br><br>Picture will be here: ${amazon_item_picture}
+                        <br>
+                        <br>
+                        <div tal:condition="allowed_remaining_links > 0"
+                        > You can claim ${allowed_remaining_links} <a href="/links/link_landpage/${order_id}}">Claim
+                            Again</a></div>
+                        <br>
+                        <form class="standard-form" action="/links/amazon_link/${redeem_page_link}" method="POST">
+                            <button type="submit" class="btn btn--secondary"
+                                    style="margin-bottom: 20px; margin-left: 0;" onclick="">Go to Amazon to Claim!
+                            </button>
+                        </form>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

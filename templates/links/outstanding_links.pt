@@ -1,0 +1,152 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+
+        <section class="section-page active-order-page">
+            <div class="section-page-content">
+                <div class="container">
+                    <h1>Active Order</h1>
+
+                    <div class="block-steps">
+
+                        <div class="row block-step">
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+                                    <h3>Verify,
+                                        Personalize,
+                                        Specify</h3>
+                                    <h5>Add your personalized message below. Each message will always start with
+                                        ‘Congratulations [Name]! You’ve been gifted a product by [Company].’</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-9 right-content">
+                                <div class="card card-3">
+                                    <div class="card-header">
+                                        Active order details
+                                    </div>
+                                    <div class="card-body">
+                                        <h4>This is the product you’ve selected</h4>
+
+                                        <div class="top-info">
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">ORDER ID</p>
+                                                <p class="blue-text float-right">${order_id}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">PRODUCT NAME</p>
+                                                <p class="blue-text float-right">${item}</p>
+                                            </div><div class="clearfix">
+                                                <p class="blue-text float-left">PRODUCT AMAZON PAGE</p>
+                                                <p class="blue-text float-right">${order_url}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">PRODUCTS ORDERED</p>
+                                                <p class="blue-text float-right">${total_links}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">CLAIMED
+                                                    <a tal:condition="confirmed_clients"
+                                                            href="/links/client_list/${order_id}" target="_blank">Client
+                                                        List</a></p>
+                                                <p class="blue-text float-right">${claimed_items} </p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">USED</p>
+                                                <p class="blue-text float-right">${used_links}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">REMAINING</p>
+                                                <p class="blue-text float-right">${total_links-used_links}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">RECIPIENT CONGRATULATIONS PAGE</p>
+                                                <p class="blue-text float-right"><a class="btn btn--green-light"
+                                                                                    style="margin-bottom: 20px; margin-left: 0;"
+                                                                                    href="${landpage_url}"
+                                                                                    target="_blank">${landpage_url}</a>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card card-3">
+                                    <div class="card-header">Personalized message</div>
+                                    <div class="card-body">
+                                        <form action="/links/update_personalized_message/${order_id}" method="POST">
+
+                                            <h4>Use this template or edit your personalized message here</h4>
+
+
+                                            <div class="box box-detail">
+									<textarea class="form-control" disabled>
+Congratulations!
+
+You’ve been gifted a product by {company name}
+
+We’re so appreciative of your continued use and feedback. It makes a HUGE difference.
+
+Please accept this gift as our thank you to you.
+									</textarea>
+                                            </div>
+
+                                            <div class="bottom-btns text-right">
+                                                <a href="#" class="btn btn-submit btn-green-blue">Add Logo</a>
+                                                <a href="#" class="btn btn-submit btn-green-blue">Preview</a>
+                                                <button class="btn btn-submit btn-green change">Update Message</button>
+                                                <button class="btn btn-submit btn-green save d-none">Save</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="card card-3">
+                                    <div class="card-header">Advanced settings</div>
+                                    <div class="card-body">
+                                        <h4>Check and edit your advanced settings</h4>
+                                        <div class="block-info clearfix">
+                                            <p class="blue-text float-left text-uppercase">PAUSE CAMPAIGN</p>
+                                            <p class="float-right">
+                                                <span>ON (Click toggle to turn off)</span>
+                                                <span class="block-right">
+											<span class="block-checkbox-slider">
+												<input type="checkbox" id="checkbox_1" class="checkbox"
+                                                       checked="checked"/>
+												<label for="checkbox_1"></label>
+											</span>
+										</span>
+                                            </p>
+                                        </div>
+                                        <div class="block-info clearfix">
+                                            <p class="blue-text float-left text-uppercase">ACTIVATED REDEEM CODE</p>
+                                            <p class="float-right">
+                                                <span tal:condition="redeem_code">ON (Click edit to specify)</span>
+                                                <span tal:condition="not redeem_code">OFF (Click edit to specify)</span>
+                                                <a href="/links/set_redeem_code/${order_id}" class="btn btn-submit btn-select">Edit</a>
+                                            </p>
+                                        </div>
+                                        <div class="block-info clearfix">
+                                            <p class="blue-text float-left text-uppercase">RESTRICTED EMAILS</p>
+                                            <p class="float-right">
+                                                <span tal:condition="restricted_emails">ON (Click edit to specify)</span>
+                                                <span tal:condition="not restricted_emails">OFF (Click edit to specify)</span>
+                                                <a href="/links/set_restricted_emails/${order_id}" class="btn btn-submit btn-select">Edit</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bottom-btn clearfix">
+                                    <a href="/account/" class="btn btn-submit btn-blue float-right">Back to My Account</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>
