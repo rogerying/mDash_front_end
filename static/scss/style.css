@@ -73,6 +73,7 @@ h1 {
   line-height: normal;
   letter-spacing: -0.6px;
   margin: 0 0 48px;
+  max-width: 100%;
   opacity: 0.9; }
 
 h3 {
@@ -85,6 +86,7 @@ h3 {
   line-height: normal;
   letter-spacing: -0.6px;
   margin: 0 0 16px;
+  max-width: 100%;
   opacity: 0.9; }
 
 h4 {
@@ -97,6 +99,7 @@ h4 {
   line-height: normal;
   letter-spacing: -0.4px;
   margin: 0 0 20px;
+  max-width: 100%;
   opacity: 0.9; }
 
 h5 {
@@ -108,7 +111,8 @@ h5 {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: -0.3px;
-  margin: 0 0 30px; }
+  margin: 0 0 30px;
+  max-width: 100%; }
 
 p {
   color: #868e96;
@@ -119,7 +123,8 @@ p {
   font-stretch: normal;
   letter-spacing: -0.2px;
   line-height: 1.79;
-  margin: 0; }
+  margin: 0;
+  max-width: 100%; }
   p.blue-text {
     color: #445181;
     font-family: "Helvetica", "Helvetica", Helvetica, Arial, sans-serif;
@@ -138,6 +143,7 @@ p {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: -0.3px;
+  max-width: 100%;
   color: #e96a89; }
 
 .block-checkbox-slider {
@@ -185,7 +191,10 @@ p {
   outline: none;
   padding: 0;
   text-decoration: none !important;
-  transition: 0.7s; }
+  transition: 0.7s;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
   .btn.btn-submit {
     border-radius: 3px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
