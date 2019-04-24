@@ -191,10 +191,7 @@ p {
   outline: none;
   padding: 0;
   text-decoration: none !important;
-  transition: 0.7s;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  transition: 0.7s; }
   .btn.btn-submit {
     border-radius: 3px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
@@ -314,7 +311,10 @@ p {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
-    position: relative; }
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; }
     .btn.btn-link.green {
       color: #5df1af; }
       .btn.btn-link.green:before {
@@ -1176,8 +1176,7 @@ p {
   .active-order-page .card-3 .top-info .blue-text {
     padding: 3px 0;
     max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
     width: 50%; }
     .active-order-page .card-3 .top-info .blue-text.float-left {
       text-transform: uppercase; }

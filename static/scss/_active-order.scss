@@ -134,8 +134,7 @@
 			.blue-text {
 				padding: 3px 0;
 				max-width: 100%;
-				overflow: hidden;
-				text-overflow: ellipsis;
+				white-space: normal;
 				width: 50%;
 				
 				&.float-left {
