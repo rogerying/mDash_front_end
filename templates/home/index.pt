@@ -58,8 +58,8 @@
                     </div>
 
                     <div class="block-3">
-                        <img src="/static/img/home_1.png" class="home-img-1"/>
-                        <img src="/static/img/home_3.png" class="home-img-3"/>
+				<img src="/static/img/graph-1.png" srcset="/static/img/graph-1@2x.png 2x, /static/img/graph-1@3x.png 3x" class="home-img-1" />
+				<img src="/static/img/graph-2.png" srcset="/static/img/graph-2@2x.png 2x, /static/img/graph-2@3x.png 3x" class="home-img-3" />
 
                         <div class="container">
                             <div class="row">
@@ -96,7 +96,10 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4 text-center">
-                                    <img src="/static/img/home_2.png" class="home-img-2"/>
+                                    <div class="block-with-img">
+                                        <img class="home-img-2"  src="/static/img/map-1.png" srcset="/static/img/map-1@2x.png 2x, /static/img/map-1@3x.png 3x" />
+                                        <div class="text">mDash is being used around the world.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
