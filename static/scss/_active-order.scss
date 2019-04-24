@@ -126,12 +126,16 @@
 		
 		.top-info {
 			box-sizing: border-box;
-			display: table;
+			//display: table;
+			display: block;
 			padding: 0 30px;
 			width: 100%;
 			
 			.blue-text {
 				padding: 3px 0;
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
 				width: 50%;
 				
 				&.float-left {
