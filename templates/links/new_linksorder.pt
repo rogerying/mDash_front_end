@@ -126,15 +126,20 @@
                                                     <h3>Select category and one product from this curated list of
                                                         the most
                                                         popular items according to the store you selected.</h3>
-                                                    <select name="show_category" class="form-control">
-                                                        <option tal:repeat="c categories_select"
-                                                                value="${c[0]}">${c[1]}</option>
-                                                    </select>
-                                                    <button type="submit" name="action" value="show"
-                                                            class="btn btn-submit btn-grey"
-                                                            style="margin-bottom: 20px; margin-left: 0;">
-                                                        Select
-                                                    </button>
+
+                                                    <div class="form-for-search">
+                                                        <div class="form-group">
+                                                            <select name="show_category" class="form-control">
+                                                                <option tal:repeat="c categories_select"
+                                                                        value="${c[0]}">${c[1]}</option>
+                                                            </select>
+                                                        </div>
+                                                        <button type="submit" name="action" value="show"
+                                                                class="btn btn-submit btn-grey"
+                                                                style="margin-bottom: 20px; margin-left: 0;">
+                                                            Select
+                                                        </button>
+                                                    </div>
 
                                                     <div class="block-for-table">
                                                         <table class="table" tal:condition="show_done">

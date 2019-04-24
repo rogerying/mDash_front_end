@@ -339,7 +339,11 @@ p {
   max-width: calc(100% - 196px);
   padding: 0 48px 0 44px;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  align-items: center;
+  vertical-align: top;
+  float: left; }
   .block-info-msg.error {
     background-color: rgba(225, 0, 82, 0.02);
     border-color: rgba(220, 53, 69, 0.1);
@@ -1748,11 +1752,15 @@ p {
   h1 {
     text-align: center; }
 
+  .section-header .navbar-toggler-icon {
+    margin-top: 0; }
+
   .navbar-light .navbar-toggler {
     color: #084887;
     border-color: #72a8f7;
     height: 34px;
     line-height: 34px;
+    outline: none;
     padding: 0 8px;
     width: 40px; }
     .navbar-light .navbar-toggler .navbar-toggler-icon {
@@ -1763,6 +1771,7 @@ p {
       height: 18px;
       line-height: 1;
       margin-top: 8px;
+      outline: none;
       position: relative;
       vertical-align: top;
       width: 100%; }
@@ -1829,8 +1838,6 @@ p {
   .new-order-page.section-page .left-menu-content {
     padding-bottom: 30px; }
 
-  .my-account-page .card.card-statistics {
-    margin-top: 30px; }
   .my-account-page .left-menu-content {
     margin-bottom: 30px;
     padding: 0;
@@ -2099,6 +2106,8 @@ p {
       .new-order-page.section-page .card-3 .top-info .blue-text.float-right {
         padding-bottom: 20px; }
 
+  .my-account-page .card.card-statistics {
+    margin-top: 30px; }
   .my-account-page.my-account-profile-page .card.card-1 .top-info {
     padding: 0 20px; }
   .my-account-page.my-account-profile-page .card.card-1 .bottom-info {

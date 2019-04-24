@@ -347,6 +347,11 @@ p {
 	position: relative;
 	width: 100%;
 	
+	display: flex;
+	align-items: center;
+	vertical-align: top;
+	float: left;
+	
 	&.error {
 		background-color: rgba($color-red, 0.02);
 		border-color: rgba($color-red-1, 0.1);

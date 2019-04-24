@@ -202,7 +202,7 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane  show active" id="most_popular" role="tabpanel"
                                          aria-labelledby="most_popular-tab">
-                                        <div class="card">
+                                        <div class="card card-incomplete-orders">
                                             <div class="card-header">Active orders</div>
                                             <div class="card-body">
 
@@ -277,7 +277,7 @@
                                         </div>
                                     </div>
                                     <div class="tab-pane " id="search" role="tabpanel" aria-labelledby="search-tab">
-                                        <div class="card">
+                                        <div class="card card-incomplete-orders">
                                             <div class="card-header">Processing orders</div>
                                             <div class="card-body">
 
@@ -353,7 +353,7 @@
 
                                     <div class="tab-pane " id="special_request2" role="tabpanel"
                                          aria-labelledby="special_request-tab2">
-                                        <div class="card">
+                                        <div class="card card-incomplete-orders">
                                             <div class="card-header">Fulfilled orders</div>
                                             <div class="card-body">
 
