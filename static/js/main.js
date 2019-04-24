@@ -109,6 +109,22 @@ $(document).ready(function () {
         heightForElements($('.home-page .block-item-why'), maxHeight_inElement);
         heightForElements($('.home-page .section-1 .block-with-info'), maxHeight_element);
         heightForElements($('.home-page .section-1 .block-3 .col-lg-3'), maxHeight_element1);
+        maxHeightInAccount();
+    }
+
+    function maxHeightInAccount() {
+        var block1 = $('section.section-page.my-account-page.my-account-overview-page .mb-50 .card-statistics');
+        var block2 = $('section.section-page.my-account-page.my-account-overview-page .mb-50 .card-1');
+        var maxHeight = 0;
+
+        if(block1.outerHeight() > block2.outerHeight()) {
+            maxHeight = block1.outerHeight();
+        } else {
+            maxHeight = block2.outerHeight();
+        }
+
+        block1.height(maxHeight);
+        block2.height(maxHeight);
     }
 
     maxHeightElements();
