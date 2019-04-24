@@ -27,7 +27,7 @@
                                                 <div class="col-12 col-lg-6">
                                                     <p>Choose an Amazon store</p>
 
-                                                    <div class="form-group-lg">
+                                                    <div class="form-group">
                                                         <select name="countryID" class="form-control">
                                                             <option tal:condition="countryID"
                                                                     value="${countryID}"
@@ -38,7 +38,7 @@
 
                                                     </div>
 
-                                                    <p class="blue-text">This effects the products that will be
+                                                    <p class="blue-text mb-4 mb-lg-0">This effects the products that will be
                                                         available
                                                         for
                                                         selection.</p>
