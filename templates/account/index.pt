@@ -117,7 +117,7 @@
                                     <div class="card-header">Incomplete orders</div>
                                     <div class="card-body">
                                         <div tal:condition="not awaiting_payment">
-                                            <p class="blue-text align-c">Currently you have no incomplete orders.</p>
+                                            <p class="blue-text text-center">Currently you have no incomplete orders.</p>
                                         </div>
                                         <div class="block-for-table">
                                             <table class="table" tal:condition="awaiting_payment">
