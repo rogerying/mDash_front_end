@@ -1181,10 +1181,7 @@ p {
     .active-order-page .card-3 .top-info .blue-text.float-left {
       text-transform: uppercase; }
     .active-order-page .card-3 .top-info .blue-text.float-right {
-      text-align: right;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap; }
+      text-align: right; }
 
 .home-page {
   padding-bottom: 0; }
