@@ -936,6 +936,11 @@ p {
     .form-group-telephone .block-custom-select .item {
       padding: 10px 34px 9px 10px; }
 
+.block-for-table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto; }
+
 .new-order-page .block-custom-select {
   margin-bottom: 20px; }
 .new-order-page .block-for-search {
