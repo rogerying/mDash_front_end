@@ -1,64 +1,64 @@
 @font-face {
   font-family: 'Helvetica';
-  src: url("/static/fonts/Helvetica.ttf");
+  src: url("../fonts/Helvetica.ttf");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Helvetica';
-  src: url("/static/fonts/Helvetica-Bold.ttf");
+  src: url("../fonts/Helvetica-Bold.ttf");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'Helvetica';
-  src: url("/static/fonts/Helvetica-Oblique.ttf");
+  src: url("../fonts/Helvetica-Oblique.ttf");
   font-weight: normal;
   font-style: oblique; }
 @font-face {
   font-family: 'SFUIText';
-  src: url("/static/fonts/SFUIText-Bold.ttf");
+  src: url("../fonts/SFUIText-Bold.ttf");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'SFUIText';
-  src: url("/static/fonts/SFUIText-Medium.ttf");
+  src: url("../fonts/SFUIText-Medium.ttf");
   font-weight: 500;
   font-style: normal; }
 @font-face {
   font-family: 'SFUIDisplay';
-  src: url("/static/fonts/SFUIText-BoldItalic.eot");
-  src: local("/static/fonts/SFUIText-BoldItalic"), local("/static/fonts/SFUIText-BoldItalic"), url("/static/fonts/SFUIText-BoldItalic.eot?#iefix") format("embedded-opentype"), url("/static/fonts/SFUIText-BoldItalic.woff") format("woff"), url("/static/fonts/SFUIText-BoldItalic.ttf") format("truetype");
+  src: url("../fonts/SFUIText-BoldItalic.eot");
+  src: local("../fonts/SFUIText-BoldItalic"), local("../fonts/SFUIText-BoldItalic"), url("../fonts/SFUIText-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIText-BoldItalic.woff") format("woff"), url("../fonts/SFUIText-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic; }
 @font-face {
   font-family: 'SFUIText';
-  src: url("/static/fonts/SFUIText-HeavyItalic.eot");
-  src: local("/static/fonts/SFUIText-HeavyItalic"), local("/static/fonts/SFUIText-HeavyItalic"), url("/static/fonts/SFUIText-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("/static/fonts/SFUIText-HeavyItalic.woff") format("woff"), url("/static/fonts/SFUIText-HeavyItalic.ttf") format("truetype");
+  src: url("../fonts/SFUIText-HeavyItalic.eot");
+  src: local("../fonts/SFUIText-HeavyItalic"), local("../fonts/SFUIText-HeavyItalic"), url("../fonts/SFUIText-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIText-HeavyItalic.woff") format("woff"), url("../fonts/SFUIText-HeavyItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic; }
 @font-face {
   font-family: 'SFUIDisplay';
-  src: url("/static/fonts/SFUIDisplay-Heavy.eot");
-  src: local("/static/fonts/SF UI Display Heavy"), local("/static/fonts/SFUIDisplay-Heavy"), url("/static/fonts/SFUIDisplay-Heavy.eot?#iefix") format("embedded-opentype"), url("/static/fonts/SFUIDisplay-Heavy.woff") format("woff"), url("/static/fonts/SFUIDisplay-Heavy.ttf") format("truetype");
+  src: url("../fonts/SFUIDisplay-Heavy.eot");
+  src: local("../fonts/SF UI Display Heavy"), local("../fonts/SFUIDisplay-Heavy"), url("../fonts/SFUIDisplay-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Heavy.woff") format("woff"), url("../fonts/SFUIDisplay-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
 @font-face {
   font-family: 'SFUIDisplay';
-  src: url("/static/fonts/SFUIDisplay-Semibold.eot");
-  src: local("/static/fonts/SF UI Display Semibold"), local("/static/fonts/SFUIDisplay-Semibold"), url("/static/fonts/SFUIDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("/static/fonts/SFUIDisplay-Semibold.woff") format("woff"), url("/static/fonts/SFUIDisplay-Semibold.ttf") format("truetype");
+  src: url("../fonts/SFUIDisplay-Semibold.eot");
+  src: local("../fonts/SF UI Display Semibold"), local("../fonts/SFUIDisplay-Semibold"), url("../fonts/SFUIDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Semibold.woff") format("woff"), url("../fonts/SFUIDisplay-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 @font-face {
   font-family: 'SFUIDisplay';
-  src: url("/static/fonts/SFUIDisplay-Medium.eot");
-  src: local("/static/fonts/SF UI Display Heavy"), local("/static/fonts/SFUIDisplay-Medium"), url("/static/fonts/SFUIDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("/static/fonts/SFUIDisplay-Medium.woff") format("woff"), url("/static/fonts/SFUIDisplay-Medium.ttf") format("truetype");
+  src: url("../fonts/SFUIDisplay-Medium.eot");
+  src: local("../fonts/SF UI Display Heavy"), local("../fonts/SFUIDisplay-Medium"), url("../fonts/SFUIDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Medium.woff") format("woff"), url("../fonts/SFUIDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 @font-face {
   font-family: 'Poppins-SemiBold';
-  src: url("/static/fonts/Poppins-SemiBold.ttf"); }
+  src: url("../fonts/Poppins-SemiBold.ttf"); }
 @font-face {
   font-family: 'Poppins-Italic';
-  src: url("/static/fonts/Poppins-Italic.ttf"); }
+  src: url("../fonts/Poppins-Italic.ttf"); }
 html, body {
   margin: 0;
   padding: 0; }
@@ -1372,7 +1372,7 @@ p {
       border-radius: 10px;
       box-shadow: 0 6px 10px 4px rgba(26, 80, 159, 0.1);
       box-sizing: border-box;
-      height: 100%;
+      min-height: 300px;
       padding: 32px 0 10px; }
       .home-page .section-2 .block-item-why img {
         display: inline-block;
@@ -1485,59 +1485,55 @@ p {
   margin-bottom: 50px; }
 .my-account-page .card .card-body {
   padding: 37px 30px 2px; }
-.my-account-page .card.card-1 {
-  height: 100%; }
-  .my-account-page .card.card-1 .top-info p {
-    font-size: 12px;
-    margin-bottom: 20px; }
-  .my-account-page .card.card-1 .top-info .blue-text {
-    text-transform: uppercase; }
-  .my-account-page .card.card-1 .top-info .float-right {
-    text-align: right; }
-.my-account-page .card.card-statistics {
-  height: 100%; }
-  .my-account-page .card.card-statistics .card-body {
-    font-size: 0;
-    padding: 30px 60px 38px;
-    text-align: center; }
-  .my-account-page .card.card-statistics .block-info {
-    box-sizing: border-box;
-    display: inline-block; }
-    .my-account-page .card.card-statistics .block-info h5 {
-      color: #2781ed;
-      font-family: "SFUIText", "SFUIText", SFUIText, Arial, sans-serif;
-      font-size: 40px;
-      font-weight: 900;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: -0.6px;
-      margin: 0;
-      padding-bottom: 7px; }
-    .my-account-page .card.card-statistics .block-info p {
-      color: #243159;
-      font-family: "Helvetica", "Helvetica", Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: -0.3px;
-      margin: 0; }
-    .my-account-page .card.card-statistics .block-info.top {
-      border-bottom: solid 1px #979797;
-      width: 100%; }
-      .my-account-page .card.card-statistics .block-info.top h5 {
-        font-size: 60px; }
-      .my-account-page .card.card-statistics .block-info.top p {
-        padding-bottom: 22px; }
-    .my-account-page .card.card-statistics .block-info.left {
-      border-right: solid 1px #979797;
-      padding: 14px 0 10px 14px;
-      width: 50%; }
-    .my-account-page .card.card-statistics .block-info.right {
-      padding: 14px 14px 10px 0;
-      width: 50%; }
+.my-account-page .card.card-1 .top-info p {
+  font-size: 12px;
+  margin-bottom: 20px; }
+.my-account-page .card.card-1 .top-info .blue-text {
+  text-transform: uppercase; }
+.my-account-page .card.card-1 .top-info .float-right {
+  text-align: right; }
+.my-account-page .card.card-statistics .card-body {
+  font-size: 0;
+  padding: 30px 60px 38px;
+  text-align: center; }
+.my-account-page .card.card-statistics .block-info {
+  box-sizing: border-box;
+  display: inline-block; }
+  .my-account-page .card.card-statistics .block-info h5 {
+    color: #2781ed;
+    font-family: "SFUIText", "SFUIText", SFUIText, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    margin: 0;
+    padding-bottom: 7px; }
+  .my-account-page .card.card-statistics .block-info p {
+    color: #243159;
+    font-family: "Helvetica", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.3px;
+    margin: 0; }
+  .my-account-page .card.card-statistics .block-info.top {
+    border-bottom: solid 1px #979797;
+    width: 100%; }
+    .my-account-page .card.card-statistics .block-info.top h5 {
+      font-size: 60px; }
+    .my-account-page .card.card-statistics .block-info.top p {
+      padding-bottom: 22px; }
+  .my-account-page .card.card-statistics .block-info.left {
+    border-right: solid 1px #979797;
+    padding: 14px 0 10px 14px;
+    width: 50%; }
+  .my-account-page .card.card-statistics .block-info.right {
+    padding: 14px 14px 10px 0;
+    width: 50%; }
 .my-account-page .card.card-incomplete-orders .card-body {
   padding: 27px 10px 40px; }
 .my-account-page .card.card-incomplete-orders .table {

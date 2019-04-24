@@ -104,14 +104,19 @@ $(document).ready(function () {
     function maxHeightElements() {
         var maxHeight_inElement = 0;
         var maxHeight_element = 0;
+        var maxHeight_element1 = 0;
 
         heightForElements($('.home-page .block-item-why'), maxHeight_inElement);
         heightForElements($('.home-page .section-1 .block-with-info'), maxHeight_element);
-        heightForElements($('.home-page .section-1 .block-3 .col-lg-3'), maxHeight_element);
+        heightForElements($('.home-page .section-1 .block-3 .col-lg-3'), maxHeight_element1);
     }
 
     maxHeightElements();
     $(window).resize(function(){maxHeightElements();});
+    setTimeout(maxHeightElements, 1000);
+    setTimeout(maxHeightElements, 5000);
+    setTimeout(maxHeightElements, 9000);
+    setTimeout(maxHeightElements, 13000);
 
     openMenu();
     openLeftMenu();
