@@ -1,0 +1,63 @@
+.authorization-page {
+	padding-bottom: 160px;
+	padding-top: 100px;
+	
+	.block-with-info {
+		background-color: #f9f9f9;
+		border-radius: 10px;
+		box-sizing: border-box;
+		box-shadow: 0 2px 14px 0 rgba(7, 72, 135, 0.2);
+		display: block;
+		margin: 0 auto;
+		max-width: 500px;
+		padding: 30px;
+		width: 90%;
+		
+		h1 {
+			color: #1964e1;
+			font-family: $font-SFUIDisplay;
+			font-size: 34px;
+			font-weight: bold;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: -0.5px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		h2 {
+			color: #1964e1;
+			font-family: $font-SFUIDisplay;
+			font-size: 26px;
+			font-weight: bold;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: -0.5px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+	
+	.note.reset-success {
+		color: $color-green-6;
+	}
+	
+	.btn-submit {
+		margin-bottom: 30px;
+		width: 100%;
+	}
+	
+	.bottom-text {
+		padding-top: 60px;
+	}
+	
+	.btn-link {
+		color: $color-blue-5;
+		
+		&:hover {
+			color: $color-green-1;
+		}
+	}
+	
+}

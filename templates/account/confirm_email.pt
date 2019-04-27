@@ -1,24 +1,25 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <div class="section-page-content" style="text-align: center">
-            <div>
-                <h1>Confirming your e-mail!</h1>
-                <br>
-            </div>
-            <div class="" style="text-align: center">
+        <section class="section-page authorization-page">
+            <div class="section-page-content">
+                <div class="block-authorization">
 
-                <div>
-                    <br><br>
-                    ${message}
-                    <br>
-                    <a href="/account/index">Go to your Account</a>
-                    <br><br>
-                    <br>
+                    <div class="block-with-info">
+                        <h1>Confirming your e-mail!</h1>
+
+                        <p class="mb-4 text-center">
+                            ${message}
+                        </p>
+
+                        <p class="text-center">
+                            <a href="/account/index" class="btn btn-link">Go to your Account</a>
+                        </p>
+                    </div>
+
                 </div>
-                <br>
-                <br>
             </div>
-        </div>
+        </section>
+
     </div>
 </div>

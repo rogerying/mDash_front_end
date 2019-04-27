@@ -1,20 +1,22 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <div class="section-page-content" style="text-align: center">
-            <div>
-                <h1>Check your email,<br>your reset link has been sent</h1>
-                <br>
-            </div>
-            <div class="" style="text-align: center">
+       <section class="section-page authorization-page">
+            <div class="section-page-content">
+                <div class="block-authorization">
 
-                <div>
-                    Just click the link in your email to reset
-                    your password and log in.
+                    <div class="block-with-info">
+                        <h2>Check your email,<br>your reset link has been sent</h2>
+
+                        <p class="mb-4 text-center">
+                            Just click the link in your email <br/> to reset
+                            your password and log in.
+                        </p>
+                    </div>
+
                 </div>
-                <br>
-                <br>
             </div>
-        </div>
+       </section>
+
     </div>
 </div>
