@@ -146,6 +146,26 @@ p {
   max-width: 100%;
   color: #e96a89; }
 
+.section-cookies {
+  background-color: #4578b6;
+  bottom: 0;
+  box-shadow: 0 -2px 24px 0 rgba(0, 0, 0, 0.2);
+  left: 0;
+  padding-bottom: 32px;
+  padding-top: 36px;
+  position: fixed;
+  right: 0;
+  z-index: 10000; }
+  .section-cookies p {
+    color: #fff;
+    font-weight: normal; }
+    .section-cookies p i {
+      color: #fff; }
+  .section-cookies .btn-link {
+    color: #fff; }
+    .section-cookies .btn-link:hover, .section-cookies .btn-link:focus, .section-cookies .btn-link:active {
+      color: #32db86; }
+
 .block-checkbox-slider {
   position: relative;
   float: right; }
@@ -258,6 +278,15 @@ p {
       border-color: #868e96;
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
       color: #fff;
+      width: 195px; }
+    .btn.btn-submit.btn-white {
+      background-color: #084887;
+      border: 0;
+      border-radius: 5px;
+      border-color: #084887;
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
+      color: #fff;
+      line-height: 48px;
       width: 195px; }
     .btn.btn-submit.btn-red {
       background-color: #dc3545;
@@ -1749,7 +1778,7 @@ p {
     display: block;
     margin: 0 auto;
     max-width: 500px;
-    padding: 30px;
+    padding: 50px;
     width: 90%; }
     .authorization-page .block-with-info h1 {
       color: #1964e1;
@@ -1760,7 +1789,7 @@ p {
       font-stretch: normal;
       line-height: normal;
       letter-spacing: -0.5px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       text-align: center; }
     .authorization-page .block-with-info h2 {
       color: #1964e1;
@@ -1771,7 +1800,7 @@ p {
       font-stretch: normal;
       line-height: normal;
       letter-spacing: -0.5px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       text-align: center; }
   .authorization-page .note.reset-success {
     color: #00c295; }
@@ -1784,6 +1813,15 @@ p {
     color: #1175ed; }
     .authorization-page .btn-link:hover {
       color: #32db86; }
+  .authorization-page .block-img {
+    margin-bottom: 60px;
+    text-align: center; }
+    .authorization-page .block-img i {
+      font-size: 70px; }
+      .authorization-page .block-img i.la-frown-o {
+        color: #dc3545; }
+      .authorization-page .block-img i.la-smile-o {
+        color: #32db86; }
 
 @media (max-width: 1600px) {
   .my-account-page.my-account-profile-page .block-for-card:after {

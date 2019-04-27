@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    function forCookie() {
+        if(localStorage.getItem('Cookie') == 'YES, I AGREE') {
+            $('.section-cookies').addClass('d-none');
+        } else {
+            $('.section-cookies').removeClass('d-none');
+        }
+
+        $('.section-cookies .btn-white').click(function () {
+            localStorage.setItem('Cookie', 'YES, I AGREE');
+            $('.section-cookies').addClass('d-none');
+        });
+    }
+
     function openMenu() {
         $('.section-header .nav-item').click(function () {
             var thisElement = $(this).find('ul');
@@ -134,6 +147,7 @@ $(document).ready(function () {
     setTimeout(maxHeightElements, 9000);
     setTimeout(maxHeightElements, 13000);
 
+    forCookie();
     openMenu();
     openLeftMenu();
     closePopup();

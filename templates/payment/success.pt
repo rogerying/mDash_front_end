@@ -1,20 +1,25 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <div class="container">
-            <div class="row upcoming">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h1>Purchase successful!</h1>
-                    <div>Thanks for purchasing ${item_quantity} of ${item}
-                        <br>
-                        <br>
-                        <a href="/account/index"> Go back to the account</a>
+        <section class="section-page authorization-page">
+            <div class="section-page-content">
+                <div class="block-authorization">
+
+                    <div class="block-with-info">
+                        <h2>Purchase successful!</h2>
+
+                        <div class="block-img">
+                            <i class="la la-smile-o"></i>
+                        </div>
+
+                        <p class="text-center">Thanks for purchasing ${item_quantity} of ${item}</p>
+
+                        <p class="text-center"><a href="/account/index" class="btn btn-link">Go back to the account</a> </p>
                     </div>
+
                 </div>
-                <div class="col-md-3"></div>
             </div>
-        </div>
+        </section>
 
     </div>
 </div>

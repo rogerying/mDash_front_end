@@ -10,7 +10,7 @@
 		display: block;
 		margin: 0 auto;
 		max-width: 500px;
-		padding: 30px;
+		padding: 50px;
 		width: 90%;
 		
 		h1 {
@@ -22,7 +22,7 @@
 			font-stretch: normal;
 			line-height: normal;
 			letter-spacing: -0.5px;
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			text-align: center;
 		}
 		h2 {
@@ -34,7 +34,7 @@
 			font-stretch: normal;
 			line-height: normal;
 			letter-spacing: -0.5px;
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			text-align: center;
 		}
 	}
@@ -57,6 +57,23 @@
 		
 		&:hover {
 			color: $color-green-1;
+		}
+	}
+	
+	.block-img {
+		margin-bottom: 60px;
+		text-align: center;
+		
+		i {
+			font-size: 70px;
+			
+			&.la-frown-o {
+				color: $color-red-1;
+			}
+			
+			&.la-smile-o {
+				color: $color-green-1;
+			}
 		}
 	}
 	
