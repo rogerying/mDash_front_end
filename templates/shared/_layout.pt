@@ -107,6 +107,23 @@
 
     <div metal:define-slot="main_content"></div>
 
+
+
+<!-- Cookies -->
+<section class="section-cookies">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-10 pr-0">
+                <p><i class="fa fa-cogs" aria-hidden="true"></i> We use cookies to improve your experience on our site. To find out more read our updated <a href="#" class="btn btn-link">privacy policy</a> and <a href="#" class="btn btn-link">cookie policy</a> .</p>
+            </div>
+            <div class="col-2 text-right">
+                <div class="btn btn-submit btn-white">YES, I AGREE</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ... End Cookies -->
+
 <!-- Footer -->
 
 <footer class="section-footer">

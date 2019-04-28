@@ -96,6 +96,35 @@ p {
 	color: #e96a89;
 }
 
+.section-cookies {
+	background-color: $color-blue;
+	bottom: 0;
+	box-shadow: 0 -2px 24px 0 rgba(0, 0, 0, 0.2);
+	left: 0;
+	padding-bottom: 32px;
+	padding-top: 36px;
+	position: fixed;
+	right: 0;
+	z-index: 10000;
+	
+	p {
+		color: $color-white;
+		font-weight: normal;
+		
+		i {
+			color: $color-white;
+		}
+	}
+	
+	.btn-link {
+		color: $color-white;
+		
+		&:hover, &:focus, &:active {
+			color: $color-green-1;
+		}
+	}
+}
+
 .block-checkbox-slider {
 	position: relative;
 	float: right;
@@ -237,6 +266,16 @@ p {
 			border-color: $color-grey-1;
 			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
 			color: $color-white;
+			width: 195px;
+		}
+		&.btn-white {
+			background-color: $color-blue-2;
+			border: 0;
+			border-radius: 5px;
+			border-color: $color-blue-2;
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
+			color: $color-white;
+			line-height: 48px;
 			width: 195px;
 		}
 		&.btn-red {
