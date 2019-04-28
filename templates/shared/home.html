@@ -70,24 +70,47 @@
     </nav>
 </header>
 
-<section class="section-page congratulations-page">
+<section class="section-page section-client-list-page ">
     <div class="section-page-content">
         <div class="container">
             <h1>Client List</h1>
 
-            <div><br> Below is a list of Clients that have already redeemed a gift
-                <br> Client Name / e-mail / telephone number / allowed remaining links / claimed
+            <div class="card">
+                <div class="card-header">List of Clients that have already redeemed a gift</div>
+                <div class="card-body">
 
-                <ul tal:repeat="c client_list">
-                    <li>${c.name} /${c.email} / ${c.telephone} / ${c.allowed_remaining_links} /
-                        ${c.claimed_links} / ${c.total_used_links}
-                    </li>
-                </ul>
-                <br>
-                <br>
+                    <div class="block-for-table">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Client Name</th>
+                                <th scope="col">e-mail</th>
+                                <th scope="col">telephone number</th>
+                                <th scope="col">allowed remaining links</th>
+                                <th scope="col">claimed</th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody  tal:repeat="c client_list">
+                            <tr>
+                                <td>${c.name}</td>
+                                <td>${c.email}</td>
+                                <td>${c.telephone}</td>
+                                <td>${c.allowed_remaining_links}</td>
+                                <td>${c.claimed_links}</td>
+                                <td>${c.total_used_links}</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
             </div>
-            <br> <a href="/account/index">
-            >Back to account page</a>
+
+            <div class="bottom-btn clearfix">
+                <a href="/account/index" class="btn btn-submit btn-blue float-right">Back to My Account</a>
+            </div>
         </div>
     </div>
 

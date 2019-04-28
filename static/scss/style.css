@@ -1823,6 +1823,13 @@ p {
       .authorization-page .block-img i.la-smile-o {
         color: #32db86; }
 
+.section-client-list-page .card {
+  margin-bottom: 50px; }
+  .section-client-list-page .card .card-body {
+    padding: 20px 10px; }
+    .section-client-list-page .card .card-body .table {
+      margin-top: 0; }
+
 @media (max-width: 1600px) {
   .my-account-page.my-account-profile-page .block-for-card:after {
     border-radius: 20px;
