@@ -1,0 +1,499 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+        <div metal:fill-slot="additional_css">
+        </div>
+
+        <section class="section-page my-account-page my-account-overview-page">
+            <div class="section-page-content">
+                <div class="container">
+                    <h1>My Account <span>> Overview</span></h1>
+
+                    <div class="block-steps">
+
+                        <div class="row block-step">
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+
+                                    <div class="mobile-left-menu d-lg-none clearfix navbar-light">
+                                        <h4 class="float-left">Menu</h4>
+                                        <div class="navbar-toggler float-right"><span
+                                                class="navbar-toggler-icon"></span></div>
+                                    </div>
+
+                                    <ul>
+                                        <li>
+                                            <a href="/account" class="btn btn-link">Overview</a>
+                                        </li>
+                                        <li>
+                                            <a href="/account/update_profile" class="btn btn-link">Profile</a>
+                                        </li>
+                                        <!--?								<li>-->
+                                        <!--?									<a href="#" class="btn btn-link">Statistics</a>-->
+                                        <!--?								</li>-->
+                                        <li>
+                                            <a href="/account/orders" class="btn btn-link active">Orders</a>
+                                        </li>
+                                        <li>
+                                            <a href="/links/new_linksorder" class="btn btn-submit btn-green">Start A New
+                                                Dash</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-9 right-content">
+
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="most_popular-tab" data-toggle="tab"
+                                           href="#most_popular"
+                                           role="tab" aria-controls="most_popular" aria-selected="true">Active
+                                            (6)</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="search-tab" data-toggle="tab" href="#search"
+                                           role="tab"
+                                           aria-controls="search" aria-selected="false">Processing (7)</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="most_popular-tab" data-toggle="tab"
+                                           href="#most_popular"
+                                           role="tab" aria-controls="most_popular" aria-selected="true">Incomplete
+                                            (6)</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="special_request-tab2" data-toggle="tab"
+                                           href="#special_request2"
+                                           role="tab" aria-controls="special_request2" aria-selected="false">Fulfilled
+                                            (3)</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="special_request-tab2" data-toggle="tab"
+                                           href="#special_request2"
+                                           role="tab" aria-controls="special_request2" aria-selected="false">Search History
+                                            (2)</a>
+                                    </li>
+                                </ul>
+
+
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane  show active" id="most_popular" role="tabpanel"
+                                         aria-labelledby="most_popular-tab">
+                                        <div class="card card-incomplete-orders">
+                                            <div class="card-header">Active orders</div>
+                                            <div class="card-body">
+
+                                                <div class="block-for-table">
+                                                    <div class="block-for-table">
+                                                        <table class="table" tal:condition="outstanding_orders">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Order #</th>
+                                                                <th scope="col">Product</th>
+                                                                <th scope="col">Total Quantity</th>
+                                                                <th scope="col">Used Links</th>
+                                                                <th scope="col">Total Cost</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Remove</th>
+                                                                <th scope="col">Continue</th>
+                                                                <th scope="col">View</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr tal:repeat="o orders">
+                                                                <div tal:condition="o.status == 5">
+                                                                    <td>${o.order_id}</td>
+                                                                    <td>${o.item}</td>
+                                                                    <td>${o.total_links}</td>
+                                                                    <td>${o.used_links}</td>
+                                                                    <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                                                    <td>${o.status}</td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-remove">Remove
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-select"><a
+                                                                                href="/links/status_inc_test/${o.order_id}"
+                                                                                class="btn btn-small btn--orange">Inc
+                                                                            Status
+                                                                            Test
+                                                                        </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="/links/outstanding_links/${o.order_id}"
+                                                                           class="btn btn-submit btn-view">
+                                                                            <img src="/static/img/popout.png"
+                                                                                 srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </div>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <a href="#" class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </a>
+                                                            <span>Page 1 of 3</span>
+                                                            <a href="#" class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane " id="search" role="tabpanel" aria-labelledby="search-tab">
+                                        <div class="card card-incomplete-orders">
+                                            <div class="card-header">Processing orders</div>
+                                            <div class="card-body">
+
+                                                <div class="block-for-table">
+                                                    <div class="block-for-table">
+                                                        <table class="table" tal:condition="being_processed">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Order #</th>
+                                                                <th scope="col">Product</th>
+                                                                <th scope="col">Total Quantity</th>
+                                                                <th scope="col">Used Links</th>
+                                                                <th scope="col">Total Cost</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Remove</th>
+                                                                <th scope="col">Continue</th>
+                                                                <th scope="col">View</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr tal:repeat="o orders">
+                                                                <div tal:condition="o.status == 3 or o.status == 4">
+                                                                    <td>${o.order_id}</td>
+                                                                    <td>${o.item}</td>
+                                                                    <td>${o.total_links}</td>
+                                                                    <td>${o.used_links}</td>
+                                                                    <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                                                    <td>${o.status}</td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-remove">Remove
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-select"><a
+                                                                                href="/links/status_inc_test/${o.order_id}"
+                                                                                class="btn btn-small btn--orange">Inc
+                                                                            Status
+                                                                            Test
+                                                                        </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="/links/outstanding_links/${o.order_id}"
+                                                                           class="btn btn-submit btn-view">
+                                                                            <img src="/static/img/popout.png"
+                                                                                 srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </div>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <a href="#" class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </a>
+                                                            <span>Page 1 of 3</span>
+                                                            <a href="#" class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane " id="search" role="tabpanel" aria-labelledby="search-tab">
+                                        <div class="card card-incomplete-orders">
+                                            <div class="card-header">Processing orders</div>
+                                            <div class="card-body">
+
+                                                <div class="block-for-table">
+                                                    <div class="block-for-table">
+                                                        <table class="table" tal:condition="awaiting_payment">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Order #</th>
+                                                                <th scope="col">Product</th>
+                                                                <th scope="col">Total Quantity</th>
+                                                                <th scope="col">Used Links</th>
+                                                                <th scope="col">Total Cost</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Remove</th>
+                                                                <th scope="col">Continue</th>
+                                                                <th scope="col">View</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr tal:repeat="o orders">
+                                                                <div tal:condition="o.status == 1 or o.status == 2">
+                                                                    <td>${o.order_id}</td>
+                                                                    <td>${o.item}</td>
+                                                                    <td>${o.total_links}</td>
+                                                                    <td>${o.used_links}</td>
+                                                                    <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                                                    <td>${o.status}</td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-remove">Remove
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-select"><a
+                                                                                href="/links/status_inc_test/${o.order_id}"
+                                                                                class="btn btn-small btn--orange">Inc
+                                                                            Status
+                                                                            Test
+                                                                        </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="/links/outstanding_links/${o.order_id}"
+                                                                           class="btn btn-submit btn-view">
+                                                                            <img src="/static/img/popout.png"
+                                                                                 srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </div>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <a href="#" class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </a>
+                                                            <span>Page 1 of 3</span>
+                                                            <a href="#" class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tab-pane " id="special_request2" role="tabpanel"
+                                         aria-labelledby="special_request-tab2">
+                                        <div class="card card-incomplete-orders">
+                                            <div class="card-header">Fulfilled orders</div>
+                                            <div class="card-body">
+
+                                                <div class="block-for-table">
+                                                    <div class="block-for-table">
+                                                        <table class="table" tal:condition="historic_orders">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Order #</th>
+                                                                <th scope="col">Product</th>
+                                                                <th scope="col">Total Quantity</th>
+                                                                <th scope="col">Used Links</th>
+                                                                <th scope="col">Total Cost</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Remove</th>
+                                                                <th scope="col">Continue</th>
+                                                                <th scope="col">View</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr tal:repeat="o orders">
+                                                                <div tal:condition="o.status == 6">
+                                                                    <td>${o.order_id}</td>
+                                                                    <td>${o.item}</td>
+                                                                    <td>${o.total_links}</td>
+                                                                    <td>${o.used_links}</td>
+                                                                    <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                                                    <td>${o.status}</td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-remove">Remove
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-select"><a
+                                                                                href="/links/status_inc_test/${o.order_id}"
+                                                                                class="btn btn-small btn--orange">Inc
+                                                                            Status
+                                                                            Test
+                                                                        </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="/links/outstanding_links/${o.order_id}"
+                                                                           class="btn btn-submit btn-view">
+                                                                            <img src="/static/img/popout.png"
+                                                                                 srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </div>
+                                                            </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <a href="#" class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </a>
+                                                            <span>Page 1 of 3</span>
+                                                            <a href="#" class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+
+                                                <div class="tab-pane " id="special_request2" role="tabpanel"
+                                         aria-labelledby="special_request-tab2">
+                                        <div class="card card-incomplete-orders">
+                                            <div class="card-header">Fulfilled orders</div>
+                                            <div class="card-body">
+
+                                                <div class="block-for-table">
+                                                    <div class="block-for-table">
+                                                        <table class="table" tal:condition="search_history">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Order #</th>
+                                                                <th scope="col">Product</th>
+                                                                <th scope="col">Total Quantity</th>
+                                                                <th scope="col">Used Links</th>
+                                                                <th scope="col">Total Cost</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Remove</th>
+                                                                <th scope="col">Continue</th>
+                                                                <th scope="col">View</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr tal:repeat="o orders">
+                                                                <div tal:condition="o.status == 0">
+                                                                    <td>${o.order_id}</td>
+                                                                    <td>${o.item}</td>
+                                                                    <td>${o.total_links}</td>
+                                                                    <td>${o.used_links}</td>
+                                                                    <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                                                    <td>${o.status}</td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-remove">Remove
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="btn btn-submit btn-select"><a
+                                                                                href="/links/status_inc_test/${o.order_id}"
+                                                                                class="btn btn-small btn--orange">Inc
+                                                                            Status
+                                                                            Test
+                                                                        </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="/links/outstanding_links/${o.order_id}"
+                                                                           class="btn btn-submit btn-view">
+                                                                            <img src="/static/img/popout.png"
+                                                                                 srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </div>
+                                                            </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <a href="#" class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </a>
+                                                            <span>Page 1 of 3</span>
+                                                            <a href="#" class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="section-popup" tal:condition="message">
+                <div class="block-popup">
+                    <div class="title clearfix">
+                        <div class="btn-close float-right">
+                            <i class="la la-close"></i>
+                        </div>
+                        <h5 class="float-left">Incomplete orders</h5>
+                    </div>
+                    <div class="text-info">
+                        <p>Your 'Incomplete' orders tab shows products you've selected, but haven't completed.</p>
+
+                        <p>Would you like to remove this order? This action cannot be undone.</p>
+                    </div>
+                    <div class="block-btns">
+                        <a href="#" class="btn btn-submit btn-grey">Go back</a>
+                        <a href="#" class="btn btn-submit btn-red">Remove this order</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <div metal:fill-slot="additional_js">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

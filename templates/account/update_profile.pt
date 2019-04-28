@@ -1,4 +1,4 @@
-<div metal:use-macro="view.layout">
+<div metal:use-macro="view.layout" xmlns="http://www.w3.org/1999/html">
     <div metal:fill-slot="main_content">
 
         <section class="section-page my-account-page my-account-profile-page">
@@ -25,9 +25,9 @@
                                         <li>
                                             <a href="/account/update_profile" class="btn btn-link active">Profile</a>
                                         </li>
-                                        <!--?								<li>-->
-                                        <!--?									<a href="#" class="btn btn-link">Statistics</a>-->
-                                        <!--?								</li>-->
+                                        <!--?                               <li>-->
+                                        <!--?                                   <a href="#" class="btn btn-link">Statistics</a>-->
+                                        <!--?                               </li>-->
                                         <li>
                                             <a href="#" class="btn btn-link">Orders</a>
                                         </li>
@@ -81,51 +81,37 @@
                                                         <div class="form-group">
                                                             <form action="" method="POST">
                                                             <label>First Name</label>
-                                                            <input type="text" class="form-control" placeholder=""
+                                                            <input name="name" type="text" class="form-control" placeholder=""
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <label>Last Name</label>
-                                                            <input type="text" class="form-control" placeholder=""
+                                                            <input name="last_name" type="text" class="form-control" placeholder=""
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <label>Company</label>
-                                                            <input name="name" type="text" class="form-control" placeholder=""
+                                                            <input name="company" type="text" class="form-control" placeholder=""
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group form-group-telephone">
-                                                            <label>Telephone</label>
+                                                            <label>Telephone (e.g. +1 858 336 7888)</label>
 
-                                                            <div class="clearfix">
-                                                                <div class="block-custom-select">
-                                                                    <input type="text" class="form-control" value="en"/>
-                                                                    <div class="active-selected">
-                                                                        <span>en</span>
-                                                                        <img src="/static/img/lang.png"/>
-                                                                    </div>
-                                                                    <div class="block-items">
-                                                                        <div class="item active">
-                                                                            <span>en</span>
-                                                                            <img src="/static/img/lang.png"/>
-                                                                        </div>
-                                                                        <div class="item">
-                                                                            <span>en 1</span>
-                                                                            <img src="/static/img/lang.png"/>
-                                                                        </div>
-                                                                        <div class="item">
-                                                                            <span>en 2</span>
-                                                                            <img src="/static/img/lang.png"/>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    <select name="tel_prefix" type="text" class="block-custom-select">
+                                                                        <option value="+1">+1</option>
+                                                                        <option value="+27">+27</option>
+                                                                        <option value="+44">+44</option>
+                                                                        <option value="+34">+34</option>
+                                                                        <option value="+852">+852</option>
+                                                                        <option value="+82">+82</option>
+                                                                    </select>
+
 
                                                                 <input name="telephone" type="text" class="form-control" placeholder=""
                                                                        value=""/>
-                                                            </div>
                                                         </div>
 
 
@@ -141,41 +127,37 @@
 
                                                         <div class="form-group">
                                                             <label>Address Line 2</label>
-                                                            <input type="text" class="form-control"
+                                                            <input name="address_2" type="text" class="form-control"
                                                                    placeholder="Apartment, suite, unit, building, floor …"
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <label>City / Town</label>
-                                                            <input type="text" class="form-control" placeholder=""
+                                                            <input name="city" type="text" class="form-control" placeholder=""
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <label>State / Province / Region</label>
-                                                            <input type="text" class="form-control" placeholder=""
+                                                            <input name="state" type="text" class="form-control" placeholder=""
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <label>Zip / Postal Code</label>
-                                                            <input type="text" class="form-control" placeholder=""
+                                                            <input name="zip" type="text" class="form-control" placeholder=""
                                                                    value=""/>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <label>Country</label>
 
-                                                            <div class="block-custom-select">
-                                                                <input type="text" class="form-control" value=""/>
-                                                                <div class="active-selected"></div>
-                                                                <div class="block-items">
-                                                                    <div class="item">Country 1</div>
-                                                                    <div class="item">Country 2</div>
-                                                                    <div class="item">Country 3</div>
-                                                                </div>
-                                                            </div>
+                                                                <select name="country" type="text" class="block-custom-select">
+                                                                    <option value="USA">USA</option>
+                                                                    <option value="South Africa">South Africa</option>
+                                                                    <option value="UK">UK</option>
+                                                                </select>
 
                                                         </div>
                                                     </div>
