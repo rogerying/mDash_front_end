@@ -48,7 +48,7 @@
 		order: null,                // "asc" or "desc" to sort results
 		offset: false,              // Set to true to match items starting from their first character
 		hint: false,                // Added support for excessive "space" characters
-		accent: false,              // Will allow to type accent and give letter equivalent results, also can define a custom replacement object
+		accent: false,              // Will allow to type accent and give email equivalent results, also can define a custom replacement object
 		highlight: true,            // Added "any" to highlight any word in the template, by default true will only highlight display keys
 		multiselect: null,          // Multiselect configuration object, see documentation for all options
 		group: false,               // Improved feature, Boolean,string,object(key, template (string, function))

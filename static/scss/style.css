@@ -830,7 +830,9 @@ pre {
     padding: 32px;
     margin: 0 auto;
     max-width: 566px;
-    width: 90%; }
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto; }
     .section-popup .block-popup .title {
       padding-bottom: 32px; }
       .section-popup .block-popup .title h5 {
@@ -996,6 +998,12 @@ pre {
   font-weight: normal; }
   .set-page p em {
     font-weight: normal; }
+
+.error-page {
+  padding-bottom: 190px; }
+  .error-page h1 {
+    font-size: 110px;
+    margin-bottom: 50px; }
 
 .new-order-page .block-custom-select {
   margin-bottom: 20px; }
@@ -1852,6 +1860,85 @@ pre {
     .section-client-list-page .card .card-body .table {
       margin-top: 0; }
 
+.faq-page .block-for-search {
+  padding: 50px 0; }
+.faq-page .blocks-faq .panel {
+  background-color: #fff;
+  border: 1px solid #72a8f7;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(8, 72, 135, 0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.7s; }
+  .faq-page .blocks-faq .panel:hover, .faq-page .blocks-faq .panel:focus {
+    background-color: rgba(237, 245, 254, 0.5); }
+.faq-page .blocks-faq h4 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0; }
+.faq-page .blocks-faq p {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 25px;
+  margin: 0; }
+.faq-page .blocks-faq .panel-heading {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0; }
+  .faq-page .blocks-faq .panel-heading h4 {
+    padding: 20px; }
+.faq-page .blocks-faq .panel-body {
+  background-color: transparent;
+  border: 0;
+  padding: 0 20px 20px; }
+.faq-page .blocks-faq .form-group {
+  margin: 0;
+  padding: 0; }
+
+.about-page .section-page-content {
+  padding-top: 64px; }
+.about-page img {
+  max-width: 100%;
+  margin-bottom: 30px; }
+.about-page .map-container {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+.about-page .map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+.about-page p {
+  font-weight: normal; }
+.about-page .btn-link {
+  color: #007bff; }
+  .about-page .btn-link:hover {
+    color: #20c997; }
+.about-page .section-2-3 .block-info i {
+  color: #4578b6;
+  font-size: 20px;
+  display: inline-block;
+  padding-right: 5px;
+  vertical-align: middle; }
+.about-page .section-2-3 .block-info .text-info {
+  display: inline-block;
+  vertical-align: middle; }
+.about-page .popup-chat .la-close {
+  color: #4578b6;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  transition: 0.7s; }
+  .about-page .popup-chat .la-close:hover, .about-page .popup-chat .la-close:focus {
+    color: #000; }
+
 @media (max-width: 1600px) {
   .my-account-page.my-account-profile-page .block-for-card:after {
     border-radius: 20px;
@@ -2307,7 +2394,18 @@ pre {
       width: 100%; }
       .section-popup .block-popup .block-btns .btn.btn-red {
         margin-left: 0;
-        margin-top: 20px; } }
+        margin-top: 20px; }
+
+  .new-order-page .block-for-search .form-for-search {
+    margin-bottom: 30px; }
+    .new-order-page .block-for-search .form-for-search .btn-green {
+      width: 100%; }
+
+  .error-page {
+    padding-bottom: 90px; }
+    .error-page h1 {
+      font-size: 80px;
+      margin-bottom: 50px; } }
 @media (max-width: 400px) {
   .section-page .nav-tabs .nav-item .nav-link {
     font-size: 8px; }

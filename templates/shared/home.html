@@ -25,11 +25,13 @@
 <header class="section-header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="../../static/img/mdash_logo_color.png" srcset="../../static/img/mdash_logo_color@2x.png 2x, ../../static/img/mdash_logo_color@3x.png 3x" />
+                <img src="../../static/img/mdash_logo_color.png"
+                     srcset="../../static/img/mdash_logo_color@2x.png 2x, ../../static/img/mdash_logo_color@3x.png 3x"/>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -70,55 +72,170 @@
     </nav>
 </header>
 
-<section class="section-page authorization-page set-page">
+<section class="section-page home-page about-page">
     <div class="section-page-content">
         <div class="container">
 
-            <h1>Set Restricted E-mails for Order: ${order_id}</h1>
+            <h1 class="text-center">About page</h1>
 
-            <div>
-                <p><strong>Order:</strong> ${order_id}    <a href="/links/outstanding_links/${order_id}" class="btn btn-link">Back to Links Page</a></p>
-                <p><strong>Order item url:</strong> ${order_url}</p>
-                <p><strong>Item:</strong> ${item}</p>
-                <p><strong>Total_items_left:</strong> ${total_links-used_links}</p>
-                <p><strong>This item has already set restricted e-mails:</strong> {Yes / No / Cancel}</p>
-
-                <form action="/links/add_restricted_emails/${order_id}" method="POST" class="mt-2">
-                    <pre tal:condition="restricted_emails">
-                        <div tal:repeat="r restricted_emails">${r.email} , remaining links ${r.allowed_remaining_links}</div>
-                    </pre>
-
-                    <div class="note" tal:condition="error mb-4">${error}</div>
-
-                    <p class="mt-4">There will be a table with e-mail and remaining number of items allowed
-                        to be claimed</p>
-
-                    <div class="form-group">
-                        <textarea name="restricted_emails" rows="10"
-                                  placeholder="Please copy and paste e-mails into this text box (use commas or new line to separate)"
-                                  class="form-control form-control-textarea"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="restricted_number" required type="number" value="" placeholder="How many links can be claimed by each e-mail?" class="form-control">
-                    </div>
-
-                    <p class="mb-4"><strong>#Note:</strong> Do not add duplicate e-mails as each e-mail can claim one item per campaign</p>
-
-                    <button type="submit" class="btn btn-submit btn-green">
-                        Add Restricted E-mails
-                    </button>
-                </form>
-                <br>
-                <form action="/links/delete_restricted_emails/${order_id}" method="POST">
-                    <button type="submit" class="btn btn-submit btn-red w-100">
-                        Delete All Restricted E-mails
-                    </button>
-                    <div class="note grey-text"><strong>*note:</strong> probably need some sort of human-check</div>
-                </form>
+            <div class="row">
+                <div class="col-12 col-lg-5 text-center text-lg-left">
+                    <img src="/static/img/preview.png"/>
+                </div>
+                <div class="col-12 col-lg-7 text-center text-lg-left">
+                    <p>We are Stanford University alumni, who have worked at top tech companies (Amazon, Microsoft,
+                        Intuit), venture capital firms (US and China), high growth start-ups that have gone public, and
+                        started venture backed companies. We’ve been featured in notable media and spoken at conferences
+                        worldwide (CNBC, FT, NBC, CCTV, World Economic Forum etc…). Through our experiences and
+                        observations, we increasingly understand and recognize the power of AI to impact the world of
+                        e-Commerce in creating a borderless world and wish to deliver that value to our you, our
+                        clients.</p>
+                </div>
             </div>
 
+            <div class="section-2 section-2-1">
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-item-why">
+                            <img src="/static/img/event.png"
+                                 srcset="/static/img/event@2x.png 2x, /static/img/event@3x.png 3x">
+                            <p>Running an event or conference?  Make sure all your attendees
+                                receive their free gifts</p>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-item-why">
+                            <img src="/static/img/friends.png"
+                                 srcset="/static/img/friends@2x.png 2x, /static/img/friends@3x.png 3x">
+                            <p>Send gifts to friends and family members</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="block-item-why">
+                            <img src="/static/img/campaign.png"
+                                 srcset="/static/img/campaign@2x.png 2x, /static/img/campaign@3x.png 3x">
+                            <p>Running a marketing campaign? Incentivize actions and
+                                track your claims</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-2 section-2-2">
+                <h3 class="title">Our Partners</h3>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#" class="btn btn-link">
+                            <img src="/static/img/preview.png"/>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#" class="btn btn-link">
+                            <img src="/static/img/preview.png"/>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#" class="btn btn-link">
+                            <img src="/static/img/preview.png"/>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#" class="btn btn-link">
+                            <img src="/static/img/preview.png"/>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#" class="btn btn-link">
+                            <img src="/static/img/preview.png"/>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#" class="btn btn-link">
+                            <img src="/static/img/preview.png"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-2 section-2-3">
+                <h3 class="title text-center">Get in Touch with Us</h3>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-8">
+                        <!--Google map-->
+                        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 400px">
+                            <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                    style="border:0" allowfullscreen></iframe>
+                        </div>
+
+                        <!--Google Maps-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 text-left">
+
+                        <p class="mb-3 pt-3"> Text text  Text text  Text text  Text text  Text text  Text text </p>
+
+                        <div class="block-info">
+                            <i class="la la-map-marker"></i>
+                            <div class="text-info">
+                                <p> <strong>Text text </strong> Text text </p>
+                            </div>
+                        </div>
+                        <div class="block-info">
+                            <i class="la la-tty"></i>
+                            <div class="text-info">
+                                <p> <strong>Text text </strong> Text text </p>
+                            </div>
+                        </div>
+                        <div class="block-info">
+                            <i class="la la-envelope-o"></i>
+                            <div class="text-info">
+                                <p><a href="#" class="btn btn-link">Text text </a> </p>
+                            </div>
+                        </div>
+
+                        <div class="bottom-btn mt-5">
+                            <div class="btn btn-submit btn-blue text-uppercase">send a Message</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="section-popup popup-chat d-none">
+            <div class="block-popup popup-chat-block">
+                <i class="la la-close btn-close"></i>
+                <h3 class="text-center">Send a message</h3>
+                <h4 class="text-center">Sed diam</h4>
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea class="form-control form-control-textarea"></textarea>
+                </div>
+                <button class="btn btn-submit btn-green mt-3 w-100 p-0">Send Message</button>
+            </div>
+        </div>
+
+
     </div>
 
 </section>
@@ -129,12 +246,15 @@
             <div class="col-12 col-lg-6">
                 <div class="top-block-logo">
                     <a href="#" class="btn btn-link btn-logo">
-                        <img src="../../static/img/mdash_logo_white.png" srcset="../../static/img/mdash_logo_white@2x.png 2x, ../../static/img/mdash_logo_white@3x.png 3x" />
+                        <img src="../../static/img/mdash_logo_white.png"
+                             srcset="../../static/img/mdash_logo_white@2x.png 2x, ../../static/img/mdash_logo_white@3x.png 3x"/>
                     </a>
                 </div>
                 <div class="row">
                     <p class="col-12 col-lg-9">
-                        We created this website because global gifting is so hard! Giving away freebies, lacks engagement with your customers – so give them a digital REAL GIFT and keep track of your potential clients!  It’s as easy as sending them a link!
+                        We created this website because global gifting is so hard! Giving away freebies, lacks
+                        engagement with your customers – so give them a digital REAL GIFT and keep track of your
+                        potential clients! It’s as easy as sending them a link!
                         <a href="#" class="btn btn-link green">Learn more about mDash.</a>
                     </p>
                 </div>
@@ -165,10 +285,16 @@
                         <h4 class="pl-29">Contact us</h4>
                         <ul class="links">
                             <li>
-                                <a href="tel:1-800-MDASH-SUPPORT" class="btn btn-link"><img src="../../static/img/phone.png" srcset="../../static/img/phone@2x.png 2x, ../../static/img/phone@3x.png 3x" /> 1-800-MDASH-SUPPORT</a>
+                                <a href="tel:1-800-MDASH-SUPPORT" class="btn btn-link"><img
+                                        src="../../static/img/phone.png"
+                                        srcset="../../static/img/phone@2x.png 2x, ../../static/img/phone@3x.png 3x"/>
+                                    1-800-MDASH-SUPPORT</a>
                             </li>
                             <li>
-                                <a href="mailto:support@mdash.ai" class="btn btn-link"><img src="../../static/img/email.png" srcset="../../static/img/email@2x.png 2x, ../../static/img/email@3x.png 3x" /> support@mdash.ai</a>
+                                <a href="mailto:support@mdash.ai" class="btn btn-link"><img
+                                        src="../../static/img/email.png"
+                                        srcset="../../static/img/email@2x.png 2x, ../../static/img/email@3x.png 3x"/>
+                                    support@mdash.ai</a>
                             </li>
                         </ul>
                     </div>
@@ -176,7 +302,8 @@
             </div>
         </div>
     </div>
-    <div class="copyright text-center">Copyright <i class="la la-copyright"></i> 2019 <span>mDash Al Technologies inc.</span></div>
+    <div class="copyright text-center">Copyright <i class="la la-copyright"></i> 2019
+        <span>mDash Al Technologies inc.</span></div>
 </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -1,0 +1,69 @@
+.about-page {
+	.section-page-content {
+		padding-top: 64px;
+	}
+	
+	img {
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+	
+	.map-container{
+		overflow:hidden;
+		padding-bottom:56.25%;
+		position:relative;
+		height:0;
+	}
+	.map-container iframe{
+		left:0;
+		top:0;
+		height:100%;
+		width:100%;
+		position:absolute;
+	}
+	
+	p {
+		font-weight: normal;
+	}
+	
+	.btn-link {
+		color: $color-blue-8;
+		
+		&:hover {
+			color: $color-green-3;
+		}
+	}
+	
+	.section-2-3 {
+		.block-info {
+			i {
+				color: $color-blue;
+				font-size: 20px;
+				display: inline-block;
+				padding-right: 5px;
+				vertical-align: middle;
+			}
+			.text-info {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+	
+	.popup-chat {
+		.la-close {
+			color: $color-blue;
+			cursor: pointer;
+			font-size: 30px;
+			position: absolute;
+			right: 10px;
+			top: 15px;
+			transition: $transition-speed;
+			
+			&:hover, &:focus {
+				color: $color-black;
+			}
+		}
+	}
+	
+}

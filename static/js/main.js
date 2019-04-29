@@ -105,6 +105,15 @@ $(document).ready(function () {
         });
     }
 
+    function aboutPage() {
+        $('.about-page .section-2-3 .btn-submit').click(function () {
+            $('.about-page .popup-chat').removeClass('d-none');
+        });
+        $('.about-page .btn-close').click(function () {
+            $('.about-page .popup-chat').addClass('d-none');
+        });
+    }
+
     function heightForElements (elements, maxHeight) {
         elements.css('height', 'auto');
         elements.each(function( index ) {
@@ -147,6 +156,7 @@ $(document).ready(function () {
     setTimeout(maxHeightElements, 9000);
     setTimeout(maxHeightElements, 13000);
 
+    aboutPage();
     forCookie();
     openMenu();
     openLeftMenu();

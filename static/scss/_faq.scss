@@ -1,0 +1,59 @@
+.faq-page {
+	
+	.block-for-search {
+		padding: 50px 0;
+	}
+	
+	.blocks-faq {
+		.panel {
+			background-color: $color-white;
+			border: 1px solid $color-blue-3;
+			border-radius: 5px;
+			box-shadow: 0 5px 15px 0 rgba($color-blue-2, 0.1);
+			box-sizing: border-box;
+			cursor: pointer;
+			margin-bottom: 20px;
+			transition: $transition-speed;
+			
+			&:hover, &:focus {
+				background-color: rgba($color-blue-1, 0.5);
+			}
+		}
+				
+		h4 {
+			font-size: 18px;
+			line-height: 20px;
+			margin: 0;
+		}
+		
+		p {
+			font-size: 15px;
+			font-weight: normal;
+			line-height: 25px;
+			margin: 0;
+		}
+				
+		.panel-heading {
+			background-color: transparent;
+			border: 0;
+			cursor: pointer;
+			padding: 0;
+			
+			h4 {
+				padding: 20px;
+			}
+		}
+		.panel-body {
+			background-color: transparent;
+			border: 0;
+			padding: 0 20px 20px;
+		}
+				
+		.form-group {
+			margin: 0;
+			padding: 0;
+		}
+		
+	}
+	
+}

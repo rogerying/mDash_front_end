@@ -1016,6 +1016,9 @@ pre {
 		margin: 0 auto;
 		max-width: 566px;
 		width: 90%;
+				
+		max-height: 90vh;
+		overflow-y: auto;
 		
 		.title {
 			padding-bottom: 32px;
@@ -1248,4 +1251,14 @@ pre {
 			font-weight: normal;
 		}
 	}
+}
+
+.error-page {
+	padding-bottom: 190px;
+	
+	h1 {
+		font-size: 110px;
+		margin-bottom: 50px;
+	}
+	
 }
