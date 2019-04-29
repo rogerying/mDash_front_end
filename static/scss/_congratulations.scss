@@ -93,6 +93,14 @@
 				&:last-child {
 					margin-bottom: 0;
 				}
+				
+				.btn-link {
+					color: $color-blue-5;
+					
+					&:hover {
+						color: $color-green-1;
+					}
+				}
 			}
 		}
 		

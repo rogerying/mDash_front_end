@@ -1,69 +1,58 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-
-        <div class="container albums-page">
-            <div class="row upcoming">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-
+        <section class="section-page authorization-page set-page">
+            <div class="section-page-content">
+                <div class="container">
 
                     <h1>Set a Redeem Code for Order: ${order_id}</h1>
 
-
                     <div>
-                        <br>Order: ${order_id}      <a href="/links/outstanding_links/${order_id}"
-                    class="btn btn-small btn--secondary" style="margin-bottom: 20px; margin-left: 0;">Back to Link Page</a>
-                        <br>Order item url: ${order_url}
-                        <br>Item: ${item}
-                        <br>Total_items_left: ${total_links-used_links}
-                        <br>This item has already set redeem codes: {Yes / No / Cancel}
+                        <p><strong>Order:</strong> ${order_id}
+                            <a href="/links/outstanding_links/${order_id}" class="btn btn-link">Back to Link Page</a>
+                        </p>
 
-                        <br>
+                        <p><strong>Order item url:</strong> ${order_url}</p>
+                        <p><strong>Item:</strong> ${item}</p>
+                        <p><strong>Total_items_left:</strong> ${total_links-used_links}</p>
+                        <p><strong>This item has already set redeem codes:</strong> {Yes / No / Cancel}
+                            <br>
                         <pre tal:condition="redeem_code">${redeem_code}</pre>
+                        </p>
 
-                        <br>
-                        <form action="/links/set_redeem_code_number/${order_id}" method="POST">
-                            <input name="redeem_number" required type="number" value=""
-                                   placeholder="Enter # of Different Redeem Codes You want" class="form-control">
-                            <button type="submit" class="btn btn--secondary" onclick=""
-                            >Set # of different possible Redeem Codes for Each Link
+
+                        <form action="/links/set_redeem_code_number/${order_id}" method="POST" class="mt-5">
+                            <div class="form-group">
+                                <input name="redeem_number" required type="number" value=""
+                                       placeholder="Enter # of Different Redeem Codes You want" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-submit btn-green">
+                                Set # of different possible Redeem Codes for Each Link
                             </button>
-                            *note: each code will be able to be used as unlimited times
+                            <div class="note grey-text"><strong>*note:</strong> each code will be able to be used as unlimited times</div>
+
                         </form>
 
                         <br>
                         <form action="/links/set_redeem_code_unique/${order_id}" method="POST">
-                            <button type="submit" class="btn btn--secondary"
-                                    style="margin-bottom: 20px; margin-left: 0;" onclick=""
-                            >Set Unique Redeem Codee for Each Link
+                            <button type="submit" class="btn btn-submit btn-blue">
+                                Set Unique Redeem Codee for Each Link
                             </button>
-                            *note: each redeem code can only be used once
+                            <div class="note grey-text"><strong>*note:</strong> each redeem code can only be used once</div>
                         </form>
 
                         <br>
                         <form action="/links/del_redeem_codes/${order_id}" method="POST">
-                            <button type="submit" class="btn btn--secondary"
-                                    style="margin-bottom: 20px; margin-left: 0;" onclick=""
-                            >Delete need of Redeem Codes
+                            <button type="submit" class="btn btn-submit btn-red w-100 p-0">Delete need of Redeem Codes
                             </button>
-                            *note: each redeem code can only be used once
+                            <div class="note grey-text"><strong>*note:</strong> each redeem code can only be used once</div>
                         </form>
-
-
-                        <br>
-                        <br>
-                        <br>
-
                     </div>
 
-                    <br>
-
-                    <br>
                 </div>
-                <div class="col-md-2"></div>
             </div>
-        </div>
+
+        </section>
 
     </div>
 

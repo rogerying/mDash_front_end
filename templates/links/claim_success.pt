@@ -1,29 +1,37 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
+        <section class="section-page congratulations-page">
+            <div class="section-page-content">
+                <div class="container">
+                    <div class="block-with-info">
 
-        <div class="container">
-            <div class="row upcoming">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <h1>Claim Success</h1>
+                        <div class="top-block">
+                            <div class="top-info-block mb-5">
+                                <h1>Claim Success</h1>
+                                <h3>Congratulations on Claiming your gift, an e-mail will arrive shortly!</h3>
 
-                    <div><br> Congratulations on Claiming your gift, an e-mail will arrive shortly!
-                        <br>Instructions: In the e-mail will be a special link, once clicked, claim your gift through
-                        <br>Amazon by providing your amazon account or registering a new one.
-                        <br>You can then send your item to any address you wish!
-                        <br>Learn more how you TOO can also send link gifts to friends!
-                        <br><br>
-                        <br>Share your hopefully awesome experience on: Twitter, Facebook, etc....
-                        <br>
-                        <br>REGISTER NOW with this e-mail and get 15 free links!
+                                <div class="text-left">
+                                    <p>
+                                        <strong>Instructions:</strong>
+                                        <br/>In the e-mail will be a special link, once clicked, claim your gift through
+                                        <br>Amazon by providing your amazon account or registering a new one.
+                                        <br>You can then send your item to any address you wish!
+                                        <br>Learn more how you TOO can also send link gifts to friends!
+                                    </p>
+                                    <p>Share your hopefully awesome experience on: Twitter, Facebook, etc....</p>
+                                    <p><strong>REGISTER NOW</strong> with this e-mail and get 15 free links!</p>
+                                    <p><strong>TEMPORARY TEST:</strong> check out
+                                        <a href="/links/redeem_landpage/${redeem_page_link}" class="btn btn-link">Redeem Page</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <br>TEMPORARY TEST: check out <a href="/links/redeem_landpage/${redeem_page_link}"
-                    >Redeem Page</a>
                 </div>
-                <div class="col-md-2"></div>
             </div>
-        </div>
+
+        </section>
 
     </div>
 </div>

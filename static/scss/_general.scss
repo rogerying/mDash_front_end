@@ -82,6 +82,17 @@ p {
 		line-height: 1.31;
 		letter-spacing: -0.2px;
 	}
+	
+	pre {
+		color: $color-blue-4;
+	}
+	strong {
+		color: $color-blue-4;
+	}
+}
+
+pre {
+	color: $color-blue-4;
 }
 
 .note {
@@ -94,6 +105,10 @@ p {
 	letter-spacing: -0.3px;
 	max-width: 100%;
 	color: #e96a89;
+	
+	&.grey-text {
+		color: $color-grey-1;
+	}
 }
 
 .section-cookies {
@@ -1223,4 +1238,14 @@ p {
 	display: block;
 	max-width: 100%;
 	overflow-x: auto;
+}
+
+.set-page {
+	p {
+		font-weight: normal;
+		
+		em {
+			font-weight: normal;
+		}
+	}
 }

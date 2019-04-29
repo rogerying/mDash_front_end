@@ -134,6 +134,13 @@ p {
     font-stretch: normal;
     line-height: 1.31;
     letter-spacing: -0.2px; }
+  p pre {
+    color: #445181; }
+  p strong {
+    color: #445181; }
+
+pre {
+  color: #445181; }
 
 .note {
   font-family: "Helvetica", "Helvetica", Helvetica, Arial, sans-serif;
@@ -145,6 +152,8 @@ p {
   letter-spacing: -0.3px;
   max-width: 100%;
   color: #e96a89; }
+  .note.grey-text {
+    color: #868e96; }
 
 .section-cookies {
   background-color: #4578b6;
@@ -983,6 +992,11 @@ p {
   max-width: 100%;
   overflow-x: auto; }
 
+.set-page p {
+  font-weight: normal; }
+  .set-page p em {
+    font-weight: normal; }
+
 .new-order-page .block-custom-select {
   margin-bottom: 20px; }
 .new-order-page .block-for-search {
@@ -1718,6 +1732,10 @@ p {
         margin-bottom: 26px; }
         .congratulations-page .top-block .text-left p:last-child {
           margin-bottom: 0; }
+        .congratulations-page .top-block .text-left p .btn-link {
+          color: #1175ed; }
+          .congratulations-page .top-block .text-left p .btn-link:hover {
+            color: #32db86; }
   .congratulations-page .middle-text {
     padding: 40px 97px; }
     .congratulations-page .middle-text p {
@@ -1822,6 +1840,10 @@ p {
         color: #dc3545; }
       .authorization-page .block-img i.la-smile-o {
         color: #32db86; }
+  .authorization-page.redeem-landpage-page .block-with-info {
+    max-width: 700px; }
+    .authorization-page.redeem-landpage-page .block-with-info h1 {
+      margin-bottom: 30px; }
 
 .section-client-list-page .card {
   margin-bottom: 50px; }

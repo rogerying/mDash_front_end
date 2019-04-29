@@ -1,66 +1,58 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-
-        <div class="container albums-page">
-            <div class="row upcoming">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-
+        <section class="section-page authorization-page set-page">
+            <div class="section-page-content">
+                <div class="container">
 
                     <h1>Set Restricted E-mails for Order: ${order_id}</h1>
 
-
                     <div>
-                        <br>Order: ${order_id}    <a href="/links/outstanding_links/${order_id}"
-                                                     class="btn btn-small btn--secondary"
-                                                     style="margin-bottom: 20px; margin-left: 0;">Back to Links Page</a>
-                        <br>Order item url: ${order_url}
-                        <br>Item: ${item}
-                        <br>Total_items_left: ${total_links-used_links}
-                        <br>This item has already set restricted e-mails: {Yes / No / Cancel}
-                        <form action="/links/add_restricted_emails/${order_id}" method="POST">
-                            <br>
-                            <pre tal:condition="restricted_emails"><div tal:repeat="r restricted_emails"
-                            >${r.email} , remaining links ${r.allowed_remaining_links}</div></pre>
-                            <div class="error-msg" tal:condition="error">
-                                    ${error}</div>
-                            <br> There will be a table with e-mail and remaining number of items allowed
-                            to be claimed
-                            <br><textarea name="restricted_emails" rows="10"
-                                          placeholder="Please copy and paste e-mails into this text box (use commas or new line to separate)"
-                                          class="form-control"></textarea>
-                            <br>
-                            <!--?<input name="restricted_number" required type="number" value=""-->
-                                   <!--?placeholder="How many links can be claimed by each e-mail?" class="form-control">-->
-                            #Note: Do not add duplicate e-mails as each e-mail can claim one item per campaign<br>
+                        <p><strong>Order:</strong> ${order_id}    <a href="/links/outstanding_links/${order_id}" class="btn btn-link">Back to Links Page</a></p>
+                        <p><strong>Order item url:</strong> ${order_url}</p>
+                        <p><strong>Item:</strong> ${item}</p>
+                        <p><strong>Total_items_left:</strong> ${total_links-used_links}</p>
+                        <p><strong>This item has already set restricted e-mails:</strong> {Yes / No / Cancel}</p>
 
-                            <button type="submit" class="btn btn--secondary"
-                                    style="margin-bottom: 20px; margin-left: 0;" onclick="">Add Restricted E-mails
+                        <form action="/links/add_restricted_emails/${order_id}" method="POST" class="mt-2">
+                            <pre tal:condition="restricted_emails">
+                                <div tal:repeat="r restricted_emails">${r.email} , remaining links ${r.allowed_remaining_links}</div>
+                            </pre>
+
+                            <div class="note" tal:condition="error mb-4">${error}</div>
+
+                            <p class="mt-4">There will be a table with e-mail and remaining number of items allowed
+                                to be claimed</p>
+
+                            <div class="form-group">
+                                <textarea name="restricted_emails" rows="10"
+                                          placeholder="Please copy and paste e-mails into this text box (use commas or new line to separate)"
+                                          class="form-control form-control-textarea"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <input name="restricted_number" required type="number" value="" placeholder="How many links can be claimed by each e-mail?" class="form-control">
+                            </div>
+
+                            <p class="mb-4"><strong>#Note:</strong> Do not add duplicate e-mails as each e-mail can claim one item per campaign</p>
+
+                            <button type="submit" class="btn btn-submit btn-green">
+                                Add Restricted E-mails
                             </button>
                         </form>
                         <br>
                         <form action="/links/delete_restricted_emails/${order_id}" method="POST">
-                            <button type="submit" class="btn btn--secondary"
-                                    style="margin-bottom: 20px; margin-left: 0;" onclick="">Delete All Restricted
-                                E-mails
+                            <button type="submit" class="btn btn-submit btn-red w-100 p-0">
+                                Delete All Restricted E-mails
                             </button>
-                            <br>*note: probably need some sort of human-check
+                            <div class="note grey-text"><strong>*note:</strong> probably need some sort of human-check</div>
                         </form>
-                        <br>
-
-                        <br>
-
-
                     </div>
 
-                    <br>
-
-                    <br>
                 </div>
-                <div class="col-md-2"></div>
             </div>
-        </div>
+
+        </section>
 
     </div>
 
