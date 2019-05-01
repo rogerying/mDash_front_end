@@ -84,15 +84,53 @@ p {
 	}
 	
 	pre {
-		color: $color-blue-4;
+		background: $color-white;
+		box-sizing: border-box;
+		border: 1px solid $color-blue-3;
+		border-radius: 6px;
+		box-shadow: inset 0 0 5px 1px rgba(18, 81, 156, 0.5);
+		color: $color-black-1;
+		display: table;
+		font-family: $font-helvetica;
+		font-size: 16px;
+		font-weight: normal;
+		height: auto;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		max-width: 100%;
+		overflow: hidden;
+		padding: 20px;
+		white-space: normal;
+		width: 100%;
 	}
+	
 	strong {
 		color: $color-blue-4;
 	}
 }
 
+
 pre {
-	color: $color-blue-4;
+	background: $color-white;
+	box-sizing: border-box;
+	border: 1px solid $color-blue-3;
+	border-radius: 6px;
+	box-shadow: inset 0 0 5px 1px rgba(18, 81, 156, 0.5);
+	color: $color-black-1;
+	display: table;
+	font-family: $font-helvetica;
+	font-size: 16px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	max-width: 100%;
+	overflow: hidden;
+	padding: 20px;
+	white-space: normal;
+	width: 100%;
 }
 
 .note {
@@ -1254,11 +1292,21 @@ pre {
 }
 
 .error-page {
-	padding-bottom: 190px;
-	
-	h1 {
-		font-size: 110px;
-		margin-bottom: 50px;
+	&.authorization-page {
+		.block-with-info {
+			
+			h1 {
+				color: $color-blue-9;
+				font-size: 80px;
+				line-height: 0.75;
+				margin-bottom: 20px;
+			}
+			
+			h2 {
+				color: $color-blue-9;
+			}
+		}
 	}
+	
 	
 }

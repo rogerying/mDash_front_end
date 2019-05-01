@@ -1,40 +1,40 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <section class="section-page authorization-page redeem-landpage-page">
+        <section class="section-page congratulations-page">
             <div class="section-page-content">
                 <div class="container">
+                    <div class="block-with-info">
 
-                    <div class="block-authorization">
+                        <div class="top-block">
+                            <div class="top-info-block mb-5">
+                                <h1 class="text-center">Redeem your gift now!</h1>
 
-                        <div class="block-with-info text-center">
-                            <h1 class="text-center">Redeem your gift now!</h1>
+                                <!--<p class="text-center">(this could also be a redeem e-mail + link to redeem_page)</p>-->
+                                <h3 class="text-center">Dear ${client_name} with ${client_email}</h3>
+                                <h4 class="text-center mb-5">You may now redeem your gift</h4>
 
-                            <!--<p class="text-center">(this could also be a redeem e-mail + link to redeem_page)</p>-->
-                            <h3 class="text-center">Dear ${client_name} with ${client_email}</h3>
-                            <h4 class="text-center mb-5">You may now redeem your gift</h4>
+                                <div class="note mb-3" tal:condition="error">${error}</div>
+                                <p>Item: ${item}</p>
 
-                            <div class="note mb-3" tal:condition="error">${error}</div>
-                            <p>Item: ${item}</p>
-
-                            <div class="block-with-img mb-4 mt-4 text-center">
-                                Picture will be here: ${amazon_item_picture}
-                            </div>
-
-                            <div tal:condition="allowed_remaining_links > 0" class="block-links">
-                                <p>You can claim ${allowed_remaining_links}
-                                    <a href="/links/link_landpage/${order_id}}" class="btn btn-link">Claim Again</a></p>
-                            </div>
-
-                            <form class="standard-form mt-5" action="/links/amazon_link/${redeem_page_link}" method="POST">
-                                <div class="bottom-btn clearfix">
-                                    <button type="submit" class="btn btn-submit btn-blue" onclick="">
-                                        Go to Amazon to Claim!
-                                    </button>
+                                <div class="block-with-img mb-4 mt-4 text-center">
+                                    Picture will be here: ${amazon_item_picture}
                                 </div>
-                            </form>
-                        </div>
 
+                                <div tal:condition="allowed_remaining_links > 0" class="block-links">
+                                    <p>You can claim ${allowed_remaining_links}
+                                        <a href="/links/link_landpage/${order_id}}" class="btn btn-link">Claim Again</a></p>
+                                </div>
+
+                                <form class="standard-form mt-5" action="/links/amazon_link/${redeem_page_link}" method="POST">
+                                    <div class="bottom-btn clearfix">
+                                        <button type="submit" class="btn btn-submit btn-blue" onclick="">
+                                            Go to Amazon to Claim!
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
