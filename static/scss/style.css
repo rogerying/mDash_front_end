@@ -135,7 +135,7 @@ p {
     line-height: 1.31;
     letter-spacing: -0.2px; }
   p pre {
-    background: #fff;
+    background: #dbebfb;
     box-sizing: border-box;
     border: 1px solid #72a8f7;
     border-radius: 6px;
@@ -158,7 +158,7 @@ p {
     color: #445181; }
 
 pre {
-  background: #fff;
+  background: #dbebfb;
   box-sizing: border-box;
   border: 1px solid #72a8f7;
   border-radius: 6px;
@@ -1177,6 +1177,15 @@ pre {
       text-overflow: ellipsis;
       white-space: nowrap; }
 
+.active-order-page.active-order-page-2 .card-3 p {
+  color: #445181;
+  text-align: right; }
+  .active-order-page.active-order-page-2 .card-3 p strong {
+    float: left; }
+  .active-order-page.active-order-page-2 .card-3 p .btn.btn-link {
+    color: #1175ed; }
+    .active-order-page.active-order-page-2 .card-3 p .btn.btn-link:hover, .active-order-page.active-order-page-2 .card-3 p .btn.btn-link:focus {
+      color: #32db86; }
 .active-order-page .bottom-btn {
   padding-bottom: 300px;
   padding-top: 13px; }
@@ -1904,7 +1913,7 @@ pre {
   width: 195px; }
 .faq-page .blocks-faq .panel {
   background-color: #fff;
-  border: 1px solid #72a8f7;
+  border: 1px solid #1964e1;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(8, 72, 135, 0.1);
   box-sizing: border-box;
@@ -1922,7 +1931,7 @@ pre {
   line-height: 25px;
   margin: 0; }
 .faq-page .blocks-faq .panel-heading {
-  background-color: #72a8f7;
+  background-color: #1964e1;
   border: 0;
   cursor: pointer;
   padding: 0; }

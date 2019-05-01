@@ -1,5 +1,24 @@
 .active-order-page {
 	
+	&.active-order-page-2 {
+		.card-3 p {
+			color: $color-blue-4;
+			text-align: right;
+			
+			strong {
+				float: left;
+			}
+			
+			.btn.btn-link {
+				color: $color-blue-5;
+				
+				&:hover, &:focus {
+					color: $color-green-1;
+				}
+			}
+		}
+	}
+	
 	.bottom-btn {
 		padding-bottom: 300px;
 		padding-top: 13px;

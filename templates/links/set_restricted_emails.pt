@@ -1,7 +1,7 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <section class="section-page active-order-page">
+        <section class="section-page active-order-page active-order-page-2">
             <div class="section-page-content">
                 <div class="container">
                     <h1>Set Restricted E-mails</h1>
