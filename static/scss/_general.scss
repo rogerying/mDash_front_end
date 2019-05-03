@@ -279,9 +279,9 @@ pre {
 			height: 29px;
 			letter-spacing: 0.2px;
 			line-height: 27px;
-			padding: 0;
+			min-width: 69px;
+			padding: 0 10px;
 			transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-			width: 69px;
 		}
 		
 		&.btn-remove {
@@ -1244,10 +1244,14 @@ pre {
 
 .form-group-telephone {
 	font-size: 0;
+	padding-top: 6px;
+	
 	.block-custom-select {
+		box-sizing: border-box;
 		display: inline-block;
-		margin-right: 30px;
-		width: 68px;
+		margin-right: 10px;
+		padding-right: 10px;
+		width: 88px;
 		vertical-align: top;
 		
 		& + .form-control {
@@ -1272,6 +1276,31 @@ pre {
 		.item {
 			padding: 10px 34px 9px 10px;
 		}
+	}
+}
+
+.for-upload-group {
+	
+	.for-upload {
+		position: relative;
+		width: 100%;
+		
+		input {
+			display: none;
+		}
+		
+		.btn-submit {
+			padding: 0 !important;
+			width: 100%;
+		}
+	}
+	
+	img {
+		border-radius: 3px;
+		height: auto;
+		max-height: 88px;
+		max-width: 100%;
+		min-width: 88px;
 	}
 }
 

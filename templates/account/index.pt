@@ -76,7 +76,7 @@
                                                     <div class="clearfix">
                                                         <p class="blue-text float-left">ADDRESS</p>
                                                         <p class="float-right">
-                                                        ${address}<br>
+                                                            ${address}<br>
                                                             Address line 2.<br>
                                                             City, State/Province, Postal code<br>
                                                             State<br>
@@ -135,22 +135,22 @@
                                                 <tbody>
                                                 <tr tal:repeat="o orders">
                                                     <div tal:condition="o.status == 1 or o.status == 2">
-                                                    <td>${o.order_id}</td>
-                                                    <td>${o.item}</td>
-                                                    <td>${o.total_links}</td>
-                                                    <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
-                                                    <td>
-                                                        <div class="btn btn-submit btn-remove">Remove</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="btn btn-submit btn-select">Continue</div>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-submit btn-view">
-                                                            <img src="/static/img/popout.png"
-                                                                 srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
-                                                        </a>
-                                                    </td>
+                                                        <td>${o.order_id}</td>
+                                                        <td>${o.item}</td>
+                                                        <td>${o.total_links}</td>
+                                                        <td>${o.currency} ${round(o.item_total_cost + o.service_cost, 2)}</td>
+                                                        <td>
+                                                            <div class="btn btn-submit btn-remove">Remove</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btn btn-submit btn-select">Continue</div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-submit btn-view">
+                                                                <img src="/static/img/popout.png"
+                                                                     srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                            </a>
+                                                        </td>
                                                     </div>
                                                 </tr>
 
@@ -236,13 +236,9 @@
                                                                         </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div class="btn btn-submit btn-select"><a
-                                                                                href="/links/status_inc_test/${o.order_id}"
-                                                                                class="btn btn-small btn--orange">Inc
-                                                                            Status
-                                                                            Test
+                                                                        <a class="btn btn-submit btn-select" href="/links/status_inc_test/${o.order_id}">
+                                                                            Inc Status Test
                                                                         </a>
-                                                                        </div>
                                                                     </td>
                                                                     <td>
                                                                         <a href="/links/outstanding_links/${o.order_id}"
@@ -311,13 +307,9 @@
                                                                         </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div class="btn btn-submit btn-select"><a
-                                                                                href="/links/status_inc_test/${o.order_id}"
-                                                                                class="btn btn-small btn--orange">Inc
-                                                                            Status
-                                                                            Test
+                                                                        <a class="btn btn-submit btn-select" href="/links/status_inc_test/${o.order_id}">
+                                                                            Inc Status Test
                                                                         </a>
-                                                                        </div>
                                                                     </td>
                                                                     <td>
                                                                         <a href="/links/outstanding_links/${o.order_id}"
@@ -387,13 +379,9 @@
                                                                         </div>
                                                                     </td>
                                                                     <td>
-                                                                        <div class="btn btn-submit btn-select"><a
-                                                                                href="/links/status_inc_test/${o.order_id}"
-                                                                                class="btn btn-small btn--orange">Inc
-                                                                            Status
-                                                                            Test
+                                                                        <a class="btn btn-submit btn-select" href="/links/status_inc_test/${o.order_id}">
+                                                                            Inc Status Test
                                                                         </a>
-                                                                        </div>
                                                                     </td>
                                                                     <td>
                                                                         <a href="/links/outstanding_links/${o.order_id}"

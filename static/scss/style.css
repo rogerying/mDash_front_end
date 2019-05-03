@@ -291,9 +291,9 @@ pre {
       height: 29px;
       letter-spacing: 0.2px;
       line-height: 27px;
-      padding: 0;
-      transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-      width: 69px; }
+      min-width: 69px;
+      padding: 0 10px;
+      transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
     .btn.btn-submit.btn-remove {
       background-color: rgba(220, 53, 69, 0.72);
       border: 0;
@@ -1005,11 +1005,14 @@ pre {
       background-color: rgba(239, 240, 243, 0.6); }
 
 .form-group-telephone {
-  font-size: 0; }
+  font-size: 0;
+  padding-top: 6px; }
   .form-group-telephone .block-custom-select {
+    box-sizing: border-box;
     display: inline-block;
-    margin-right: 30px;
-    width: 68px;
+    margin-right: 10px;
+    padding-right: 10px;
+    width: 88px;
     vertical-align: top; }
     .form-group-telephone .block-custom-select + .form-control {
       display: inline-block;
@@ -1024,6 +1027,21 @@ pre {
       padding: 13px 32px 13px 10px; }
     .form-group-telephone .block-custom-select .item {
       padding: 10px 34px 9px 10px; }
+
+.for-upload-group .for-upload {
+  position: relative;
+  width: 100%; }
+  .for-upload-group .for-upload input {
+    display: none; }
+  .for-upload-group .for-upload .btn-submit {
+    padding: 0 !important;
+    width: 100%; }
+.for-upload-group img {
+  border-radius: 3px;
+  height: auto;
+  max-height: 88px;
+  max-width: 100%;
+  min-width: 88px; }
 
 .block-for-table {
   display: block;
@@ -1661,11 +1679,22 @@ pre {
     padding-left: 68px; }
     .my-account-page.my-account-orders-page .nav-tabs .nav-item {
       width: calc(25% - 23px); }
+    .my-account-page.my-account-orders-page .nav-tabs.nav-tabs-5 {
+      padding-left: 0; }
+      .my-account-page.my-account-orders-page .nav-tabs.nav-tabs-5 .nav-item {
+        margin-right: 10px;
+        width: calc(20% - 8px); }
+        .my-account-page.my-account-orders-page .nav-tabs.nav-tabs-5 .nav-item:last-child {
+          margin-right: 0; }
+      .my-account-page.my-account-orders-page .nav-tabs.nav-tabs-5 + .tab-content {
+        margin-top: -40px; }
   .my-account-page.my-account-orders-page .table {
     margin-top: 0; }
 .my-account-page.my-account-profile-page .form-group label {
   box-sizing: border-box;
   padding-left: 10px; }
+.my-account-page.my-account-profile-page .form-group img {
+  max-width: 100%; }
 .my-account-page.my-account-profile-page .top-info {
   padding: 0 98px 80px; }
 .my-account-page.my-account-profile-page .bottom-info {

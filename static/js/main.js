@@ -114,6 +114,21 @@ $(document).ready(function () {
         });
     }
 
+    function uploadImg() {
+        $('#imgFile').change(function () {
+            var input = $(this)[0];
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        });
+    }
+
     function heightForElements (elements, maxHeight) {
         elements.css('height', 'auto');
         elements.each(function( index ) {
@@ -163,4 +178,5 @@ $(document).ready(function () {
     closePopup();
     customSelect();
     activeOrder();
+    uploadImg();
 });

@@ -184,6 +184,24 @@
 			.nav-item {
 				width: calc(25% - 23px);
 			}
+			
+			&.nav-tabs-5 {
+				padding-left: 0;
+				
+				.nav-item {
+					margin-right: 10px;
+					width: calc(20% - 8px);
+					
+					&:last-child {
+						margin-right: 0;
+					}
+					
+				}
+				
+				& + .tab-content {
+					margin-top: -40px;
+				}
+			}
 		}
 		
 		.table {
@@ -197,6 +215,11 @@
 				box-sizing: border-box;
 				padding-left: 10px;
 			}
+			
+			img{
+				max-width: 100%;
+			}
+			input[type=file]{}
 		}
 		
 		.top-info {
