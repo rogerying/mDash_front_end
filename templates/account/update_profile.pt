@@ -121,7 +121,7 @@
                                                                 <label for="imgFile" class="btn btn-submit btn-blue">Select Image</label>
                                                             </div>
 
-                                                            <img id="blah" src="../../static/img/no-img.png" alt="your image" />
+                                                            <img id="blah" src="/static/img/no-img.png" alt="your image" />
                                                         </div>
 
 
