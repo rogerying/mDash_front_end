@@ -97,9 +97,9 @@
                                                 <div class="col-12 col-lg-6 block-activate text-center">
                                                     <h3>Activate</h3>
                                                     <span class="block-checkbox-slider">
-												<input type="checkbox" id="checkbox_1" class="checkbox"
+												<input type="checkbox" id="checkbox_for_promotions" class="checkbox"
                                                        checked="checked"/>
-												<label for="checkbox_1"></label>
+												<label for="checkbox_for_promotions"></label>
 											</span>
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@
 
                                                     <div class="row">
                                                         <p class="col-7 blue-text">Updated Total</p>
-                                                        <p class="col-5 grey-text">$9,037 [TEST]</p>
+                                                        <p class="col-5 grey-text price-updated-total">$9,037 [TEST]</p>
                                                     </div>
                                                 </div>
                                             </div>

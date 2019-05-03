@@ -129,6 +129,40 @@ $(document).ready(function () {
         });
     }
 
+    function forPaymentPage() {
+        $('.payment-page .card-promotions #checkbox_for_promotions').change(function () {
+            var checkbox_for_promotions = $(this);
+            var price_updated_total = $('.payment-page .card-promotions .price-updated-total');
+            console.log(checkbox_for_promotions.prop("checked"));
+
+            $.ajax({
+                type:     "post",
+                data:     {id: 0},
+                cache:    false,
+                url:      "doIt.php",
+                dataType: "text",
+                error: function (request, error) {
+                    console.log(arguments);
+                    alert(" Can't do because: " + error);
+                    if(checkbox_for_promotions.prop("checked") === true) {
+                        checkbox_for_promotions.prop("checked", false);
+                    } else {
+                        checkbox_for_promotions.prop("checked", true);
+                    }
+                },
+                success: function () {
+                    if(checkbox_for_promotions.prop("checked") === true) {
+                        checkbox_for_promotions.prop("checked", true);
+                        price_updated_total.text('$123');
+                    } else {
+                        checkbox_for_promotions.prop("checked", false);
+                        price_updated_total.text('$321');
+                    }
+                }
+            });
+        });
+    }
+
     function heightForElements (elements, maxHeight) {
         elements.css('height', 'auto');
         elements.each(function( index ) {
@@ -179,4 +213,5 @@ $(document).ready(function () {
     customSelect();
     activeOrder();
     uploadImg();
+    forPaymentPage();
 });
