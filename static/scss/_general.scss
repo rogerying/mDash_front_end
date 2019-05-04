@@ -260,6 +260,7 @@ pre {
 			border-color: $color-green-3;
 			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
 			color: $color-white;
+			line-height: 48px;
 		}
 		&.btn-purp {
 			background-color: #6610f2;
@@ -319,6 +320,7 @@ pre {
 			border-color: $color-grey-1;
 			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
 			color: $color-white;
+			line-height: 48px;
 			width: 195px;
 		}
 		&.btn-white {
@@ -1153,6 +1155,9 @@ pre {
 		letter-spacing: -0.2px;
 		padding: 15px;
 		vertical-align: middle;
+		
+		white-space: normal;
+		word-break: break-all;
 	}
 }
 

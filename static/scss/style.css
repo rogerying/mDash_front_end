@@ -276,7 +276,8 @@ pre {
       background-color: #20c997;
       border-color: #20c997;
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
-      color: #fff; }
+      color: #fff;
+      line-height: 48px; }
     .btn.btn-submit.btn-purp {
       background-color: #6610f2;
       border-color: #6610f2;
@@ -323,6 +324,7 @@ pre {
       border-color: #868e96;
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
       color: #fff;
+      line-height: 48px;
       width: 195px; }
     .btn.btn-submit.btn-white {
       background-color: #084887;
@@ -938,7 +940,9 @@ pre {
     line-height: normal;
     letter-spacing: -0.2px;
     padding: 15px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-all; }
 
 .block-custom-select {
   position: relative; }
