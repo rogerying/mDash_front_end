@@ -1,20 +1,451 @@
 <div metal:use-macro="view.layout">
     <div metal:fill-slot="main_content">
 
-        <div class="container">
+        <section class="section-page new-order-page">
             <div class="section-page-content">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="container">
                     <h1>Try it now!</h1>
-                    <div>The value from the controller is ${value}.</div>
-                    <br><br><br>
-                    This page will be a form where users can immediately buy a link which gets sent to their e-mail
-                    <br><br><br><br>
+
+                    <div class="block-steps">
+
+                        <div class="row block-step block-step-1">
+
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+                                    <h3 class="text-uppercase">STEP 1</h3>
+                                    <h5>Select your global search filters</h5>
+                                    <div class="note">Note: Per Order maximum is currently $10,000.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-9 right-content">
+                                <div class="card mb-3">
+                                    <div class="card-header">Step 1 – Global search filters</div>
+                                    <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-12 col-lg-6">
+                                                <p>Choose an Amazon store</p>
+
+                                                <div class="form-group">
+                                                    <select name="countryID" class="form-control">
+                                                        <option tal:condition="countryID"
+                                                                value="${countryID}"
+                                                                selected="selected">${country}</option>
+                                                        <option tal:repeat="c countries_select"
+                                                                value="${c[1]}">${c[0]}</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <p class="blue-text mb-4 mb-lg-0">This effects the products that will be
+                                                    available
+                                                    for
+                                                    selection.</p>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <p>Choose a number of items</p>
+                                                <div class="form-group">
+                                                    <input required type="number" class="form-control"
+                                                           placeholder="Choose a number of items"
+                                                           name="item_quantity"
+                                                           value="${item_quantity}"/>
+                                                </div>
+                                                <p class="blue-text">This is the number of products you’ll be
+                                                    purchasing.</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix block-btn">
+                                            <div class="block-info-msg error d-none">
+                                                <i class="la la-close red"></i>
+                                                <span>test error testing</span>
+                                                <i class="fa fa-close grey"></i>
+                                            </div>
+                                            <div class="block-info-msg confirmed d-none">
+                                                <i class="la la-check"></i>
+                                                <span>Confirmed!</span>
+                                                <i class="fa fa-close grey"></i>
+                                            </div>
+                                            <div class="btn btn-submit btn-grey float-right btn-conf">
+                                                Confirm
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--?STEP TWO    -->
+
+                        <div class="row block-step block-step-2 d-none">
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+                                    <h3 class="text-uppercase">STEP 2</h3>
+                                    <h5>Select how you’d like to search for results.</h5>
+                                    <div class="note"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-9 right-content card-2">
+
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="most_popular-tab" data-toggle="tab"
+                                           href="#most_popular"
+                                           role="tab" aria-controls="most_popular" aria-selected="true">Most
+                                            Popular</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="search-tab" data-toggle="tab" href="#search"
+                                           role="tab"
+                                           aria-controls="search" aria-selected="false">Search</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="special_request-tab" data-toggle="tab"
+                                           href="#special_request"
+                                           role="tab" aria-controls="special_request" aria-selected="false">Special
+                                            Request</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane tab-pane-1 show active" id="most_popular" role="tabpanel"
+                                         aria-labelledby="most_popular-tab">
+                                        <div class="card">
+                                            <div class="card-header">Step 2 – Product search: most popular</div>
+                                            <div class="card-body">
+                                                <h3>Select category and one product from this curated list of
+                                                    the most
+                                                    popular items according to the store you selected.</h3>
+
+                                                <div class="block-for-search">
+                                                    <div class="form-for-search">
+                                                        <div class="form-group">
+                                                            <select name="show_category" class="form-control">
+                                                                <option tal:repeat="c categories_select"
+                                                                        value="${c[0]}">${c[1]}</option>
+                                                            </select>
+                                                            <div class="clearfix block-for-price">
+                                                                <p>Price Range from: </p>
+                                                                <input name="price_range_from" type="number" class="form-control mb-1 mt-1" />
+                                                                <p class="text-2"> to: </p>
+                                                                <input name="price_range_to" type="number" class="form-control mb-1 mt-1" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn btn-submit btn-grey btn-search">
+                                                            Select
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="block-for-table">
+                                                    <table class="table" tal:condition="show_done">
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col">ASIN #</th>
+                                                            <th scope="col">Product</th>
+                                                            <th scope="col">Price / Item</th>
+                                                            <th scope="col">Category Sales Rank</th>
+                                                            <th scope="col">Select Item</th>
+                                                            <th scope="col">View on Amazon</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr tal:repeat="s show_popular">
+                                                            <td>${s.asin}</td>
+                                                            <td>${s.productHeadline}</td>
+                                                            <td>${currency} ${s.averageSellPrice}</td>
+                                                            <td>${s.salesRankCategory}</td>
+                                                            <td>
+                                                                <div class="btn btn-submit btn-select">Select </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="${s.productLink}" target="_blank"
+                                                                   class="btn btn-submit btn-view">
+                                                                    <img src="/static/img/popout.png"
+                                                                         srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <div class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </div>
+                                                            <span>Page 1 of 3</span>
+                                                            <div class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane tab-pane-2" id="search" role="tabpanel"
+                                         aria-labelledby="search-tab">
+                                        <div class="card">
+                                            <div class="card-header">Step 2 – Product search: most popular</div>
+                                            <div class="card-body">
+                                                <div class="block-for-search">
+                                                    <p>Search for your item</p>
+                                                    <div class="form-for-search">
+                                                        <div class="form-group">
+                                                            <input name="search_text" type="text"
+                                                                   class="form-control mb-1"
+                                                                   placeholder="Please enter keywords of the item you wish to find"
+                                                            >
+                                                            <select name="search_category" class="form-control">
+                                                                <option value=-1>All</option>
+                                                                <option tal:repeat="c categories_select"
+                                                                        value="${c[0]}">${c[1]}</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="btn btn-submit btn-grey btn-search">Search</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="block-for-table">
+                                                    <table class="table table-2" tal:condition="search_done">
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col">ASIN #</th>
+                                                            <th scope="col">Product</th>
+                                                            <th scope="col">Price</th>
+                                                            <th scope="col">Select Item</th>
+                                                            <th scope="col">View on Amazon</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr tal:repeat="s search_results">
+                                                            <td>${s.asin}</td>
+                                                            <td>${s.productHeadline}</td>
+                                                            <td>${currency} ${s.averageSellPrice}</td>
+                                                            <td>
+                                                                <div class="btn btn-submit btn-select">
+                                                                    Select
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="${s.productLink}" target="_blank"
+                                                                   class="btn btn-submit btn-view">
+                                                                    <img src="/static/img/popout.png"
+                                                                         srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="bottom-section">
+                                                    <div class="block-pagination">
+                                                        <div class="block-pagination-main">
+                                                            <div class="btn btn-link prev">
+                                                                <i class="la la-angle-left"></i>
+                                                            </div>
+                                                            <span>Page 1 of 3</span>
+                                                            <div class="btn btn-link next">
+                                                                <i class="la la-angle-right"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="results">Results: 6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane tab-pane-3" id="special_request" role="tabpanel"
+                                         aria-labelledby="special_request-tab">
+                                        <div class="card">
+                                            <div class="card-header">Step 2 – Special request</div>
+                                            <div class="card-body card-body-special-request">
+                                                <div class="block-for-search">
+                                                    <p>Enter ASIN# of Product (what is an ASIN#?</p>
+                                                    <div class="form-for-search">
+                                                        <div class="form-group">
+                                                            <input name="asin_search" type="text" type="text"
+                                                                   class="form-control"
+                                                                   placeholder="Enter..."
+                                                                   value="">
+                                                        </div>
+                                                        <button class="btn btn-submit btn-green btn-search">Search</button>
+                                                    </div>
+                                                    <div class="clearfix mt-2">
+                                                        <div class="block-info-msg error" tal:condition="error">
+                                                            <i class="la la-close red"></i>
+                                                            <span>${error}</span>
+                                                            <i class="fa fa-close grey"></i>
+                                                        </div>
+                                                    </div>
+                                                    <p class="w-100">*Note: if item has not been approved yet, you may make a
+                                                        special request</p>
+                                                </div>
+
+                                                <div class="block-for-table">
+                                                    <table class="table table-2">
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col">ASIN #</th>
+                                                            <th scope="col">Product</th>
+                                                            <th scope="col">Price</th>
+                                                            <th scope="col">Select Item</th>
+                                                            <th scope="col">View</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>ID8HFE9374</td>
+                                                            <td>[WILL CONSIDER ADDING STEP TO CODE]
+                                                            </td>
+                                                            <td>[PRICE]</td>
+                                                            <td>
+                                                                <div class="btn btn-submit btn-select">
+                                                                    Select
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="${s.productLink}" target="_blank" class="btn btn-submit btn-view">
+                                                                    <img src="/static/img/popout.png"
+                                                                         srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="note text-right">Must click the ‘Select’ button on a
+                                                    product to
+                                                    proceed.
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <!--?Step 3-->
+
+                        <div class="row block-step block-step-3 d-none">
+                            <div class="col-12 col-lg-3 left-menu">
+                                <div class="left-menu-content">
+                                    <h3 class="text-uppercase">STEP 3</h3>
+                                    <h5>Review and confirm your selections.</h5>
+                                    <div class="note"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-9 right-content">
+                                <div class="card card-3">
+                                    <div class="card-header">Step 3 – Confirm selection</div>
+                                    <div class="card-body">
+                                        <div class="clearfix top-info">
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">AMAZON COUNTRY</p>
+                                                <p class="blue-text float-right">${country}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">LINK/PRODUCT QUANTITY</p>
+                                                <p class="blue-text float-right">${item_quantity}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">PRODUCT NAME</p>
+                                                <p class="blue-text float-right">${item.productHeadline}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">ASIN #</p>
+                                                <p class="blue-text float-right">${item.asin}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">AMAZON PAGE</p>
+                                                <p class="blue-text float-right">
+                                                    <a href="${item.productLink}" target="_blank" class="btn btn-link">Click here</a></p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">LIST PRICE [CONSIDER]</p>
+                                                <p class="blue-text float-right">${item.currency} {item_price}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">PRIME</p>
+                                                <p class="blue-text float-right">${item.orderType}</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="blue-text float-left">mDASH PRICE</p>
+                                                <p class="blue-text float-right">${item.currency} ${item_price}</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix bottom-info">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-5 ml-auto">
+                                                    <div class="row">
+                                                        <p class="col-6 blue-text">Order Cost</p>
+                                                        <p class="col-6 grey-text">${item.currency} ${item_total_cost}</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p class="col-6 blue-text">Service Fee</p>
+                                                        <p class="col-6 grey-text">(To be calculated)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix block-btn">
+                                            <form action="/links/step_three_confirm/${countryID}:${item_quantity}:${item.asin}:${item.averageSellPrice}"
+                                                  method="POST">
+                                                <button class="btn btn-submit btn-green float-right">
+                                                    Confirm and Proceed to Payment
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    <div tal:condition="special_request">
+                        <div class="row block-step">
+                            <form action="/links/special_asin_request" method="POST">
+                                <div class="block-for-search">
+                                    <p>Enter the ASIN number of Amazon product your wish</p>
+                                    <input name="asin_request" type="text" value=""
+                                           placeholder="Enter..."
+                                           class="form-control">
+                                    <p>Enter the exact URL of the Amazon product your wish</p>
+                                    <input name="item_url" type="text" value=""
+                                           placeholder="http://www.amazon.com/..."
+                                           class="form-control">
+                                    <button type="submit" class="btn btn--secondary"
+                                            style="margin-bottom: 20px; margin-left: 0;">
+                                        Request
+                                    </button>
+                                    <br>
+                                    NOTE: Special requests mпay take 3-7 business days to process
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
 
                 </div>
-                <div class="col-md-3"></div>
+                </div>
             </div>
-        </div>
+        </section>
 
     </div>
 </div>

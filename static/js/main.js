@@ -219,6 +219,8 @@ $(document).ready(function () {
             function step2_1() {
                 $('.new-order-page .block-step-2 .tab-pane-1 .btn-search').click(function () {
                     var val_show_category = $('.new-order-page .block-step-2 .tab-pane-1 select[name=show_category]').val();
+                    var val_price_range_from = $('.new-order-page .block-step-2 .tab-pane-1 input[name=price_range_from]').val();
+                    var val_price_range_to = $('.new-order-page .block-step-2 .tab-pane-1 input[name=price_range_to]').val();
                     var block_pagination_results = $('.new-order-page .block-step-2 .tab-pane-1 .results');
                     var block_pagination = $('.new-order-page .block-step-2 .tab-pane-1 .block-pagination-main');
 

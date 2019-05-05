@@ -8,6 +8,27 @@
 		padding: 0 58px;
 		position: relative;
 		
+		.block-for-price {
+			font-size: 0;
+			
+			p, .form-control {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			p {
+				width: 130px;
+			}
+			
+			p.text-2 {
+				text-align: center;
+				width: 30px;
+			}
+			
+			.form-control {
+				width: calc(50% - 80px);
+			}
+		}
+		
 		.form-for-search {
 			font-size: 0;
 			width: 100%;

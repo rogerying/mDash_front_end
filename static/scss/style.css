@@ -1070,6 +1070,18 @@ pre {
 .new-order-page .block-for-search {
   padding: 0 58px;
   position: relative; }
+  .new-order-page .block-for-search .block-for-price {
+    font-size: 0; }
+    .new-order-page .block-for-search .block-for-price p, .new-order-page .block-for-search .block-for-price .form-control {
+      display: inline-block;
+      vertical-align: middle; }
+    .new-order-page .block-for-search .block-for-price p {
+      width: 130px; }
+    .new-order-page .block-for-search .block-for-price p.text-2 {
+      text-align: center;
+      width: 30px; }
+    .new-order-page .block-for-search .block-for-price .form-control {
+      width: calc(50% - 80px); }
   .new-order-page .block-for-search .form-for-search {
     font-size: 0;
     width: 100%; }
