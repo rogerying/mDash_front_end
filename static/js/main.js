@@ -238,7 +238,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -278,7 +278,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -318,7 +318,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -362,7 +362,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -402,7 +402,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -442,7 +442,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -481,7 +481,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Select</div>' +
+                                '<div class="btn btn-submit btn-select">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
