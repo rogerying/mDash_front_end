@@ -185,7 +185,6 @@ $(document).ready(function () {
 
             $('.new-order-page .block-step-1 .btn-conf').click(function () {
                 var step2 = $('.new-order-page .block-step-2');
-                var step3 = $('.new-order-page .block-step-3');
                 var val_country_ID = $('.new-order-page .block-step-1 select[name=countryID]').val();
                 var val_item_quantity = $('.new-order-page .block-step-1 input[name=item_quantity]').val();
                 var info_msg_error = $('.new-order-page .block-step-1 .block-info-msg.error');
@@ -210,7 +209,6 @@ $(document).ready(function () {
                         info_msg_confirmed.find('span').text('Confirmed!');
 
                         step2.removeClass('d-none');
-                        step3.removeClass('d-none');
                     }
                 });
             });
@@ -483,7 +481,7 @@ $(document).ready(function () {
                                 '<td>[WILL CONSIDER ADDING STEP TO CODE]</td>' +
                                 '<td>[PRICE]</td>' +
                                 '<td>' +
-                                '<div class="btn btn-submit btn-select selected">Selected</div>' +
+                                '<div class="btn btn-submit btn-select selected">Select</div>' +
                                 '</td>' +
                                 ' <td>' +
                                 '<a href="#" class="btn btn-submit btn-view">' +
@@ -500,9 +498,86 @@ $(document).ready(function () {
                 });
             }
 
+            function btnSelected() {
+                $('.new-order-page .block-step-2 .btn-select').click(function () {
+                    var step3 = $('.new-order-page .block-step-3');
+                    $('.btn-select').removeClass('selected').text('Select');
+                    $(this).addClass('selected').text('Selected');
+
+                    $.ajax({
+                        type:     "post",
+                        data:     {id: 0},
+                        cache:    false,
+                        url:      "doIt.php",
+                        dataType: "text",
+                        error: function (request, error) {
+                            console.log(arguments);
+                            alert(" Can't do because: " + error);
+                        },
+                        success: function () {
+                            var top_info = '<div class="clearfix">' +
+                                '<p class="blue-text float-left">AMAZON COUNTRY</p>' +
+                                '<p class="blue-text float-right">${country}</p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">LINK/PRODUCT QUANTITY</p>' +
+                                '<p class="blue-text float-right">${item_quantity}</p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">PRODUCT NAME</p>' +
+                                '<p class="blue-text float-right">${item.productHeadline}</p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">ASIN #</p>' +
+                                '<p class="blue-text float-right">${item.asin}</p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">AMAZON PAGE</p>' +
+                                '<p class="blue-text float-right">' +
+                                '<a href="${item.productLink}" target="_blank" class="btn btn-link">Click here</a></p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">LIST PRICE [CONSIDER]</p>' +
+                                '<p class="blue-text float-right">${item.currency} {item_price}</p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">PRIME</p>' +
+                                '<p class="blue-text float-right">${item.orderType}</p>' +
+                                '</div>' +
+                                '<div class="clearfix">' +
+                                '<p class="blue-text float-left">mDASH PRICE</p>' +
+                                '<p class="blue-text float-right">${item.currency} ${item_price}</p>' +
+                                '</div>';
+
+                            var bottom_info = '<div class="row">' +
+                                '<p class="col-6 blue-text">Order Cost</p>' +
+                                '<p class="col-6 grey-text">${item.currency} ${item_total_cost}</p>' +
+                                '</div>' +
+                                '<div class="row">' +
+                                '<p class="col-6 blue-text">Service Fee</p>' +
+                                '<p class="col-6 grey-text">(To be calculated)</p>' +
+                                '</div>';
+
+                            $('.new-order-page .block-step-3 .top-info')
+                                .html('')
+                                .append(top_info);
+
+                            $('.new-order-page .block-step-3 .bottom-info .col-12.col-lg-5.ml-auto')
+                                .html('')
+                                .append(bottom_info);
+
+                            step3.removeClass('d-none');
+                        }
+                    });
+
+                });
+            }
+
             step2_1();
             step2_2();
             step2_3();
+
+            btnSelected();
         }
 
         step1();
