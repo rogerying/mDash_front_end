@@ -48,7 +48,7 @@
                                                 <div class="form-group">
                                                     <input required type="number" class="form-control"
                                                            placeholder="Choose a number of items"
-                                                           name="item_quantity"
+                                                           name="item_quantity" type="number" min="1" max="9999"
                                                            value="${item_quantity}"/>
                                                 </div>
                                                 <p class="blue-text">This is the number of products you’ll be
@@ -76,14 +76,13 @@
 
                     </div>
 
-
                     <!--?STEP TWO    -->
 
                         <div class="row block-step block-step-2 d-none">
                             <div class="col-12 col-lg-3 left-menu">
                                 <div class="left-menu-content">
                                     <h3 class="text-uppercase">STEP 2</h3>
-                                    <h5>Select how you’d like to search for results.</h5>
+                                    <h5><div id="step2_store"></div>Select how you’d like to search for results.</h5>
                                     <div class="note"></div>
                                 </div>
                             </div>
@@ -126,7 +125,7 @@
                                                                         value="${c[0]}">${c[1]}</option>
                                                             </select>
                                                             <div class="clearfix block-for-price">
-                                                                <p>Price Range from: </p>
+                                                                <p id="price_range">Price from:</p>
                                                                 <input name="price_range_from" type="number" class="form-control mb-1 mt-1" />
                                                                 <p class="text-2"> to: </p>
                                                                 <input name="price_range_to" type="number" class="form-control mb-1 mt-1" />
@@ -139,34 +138,32 @@
                                                 </div>
 
                                                 <div class="block-for-table">
-                                                    <table class="table" tal:condition="show_done">
+                                                    <table class="table">
                                                         <thead>
-                                                        <tr>
-                                                            <th scope="col">ASIN #</th>
-                                                            <th scope="col">Product</th>
-                                                            <th scope="col">Price / Item</th>
-                                                            <th scope="col">Category Sales Rank</th>
-                                                            <th scope="col">Select Item</th>
-                                                            <th scope="col">View on Amazon</th>
-                                                        </tr>
+<!--?                                                        <tr>-->
+<!--?                                                            <th scope="col">ASIN #</th>-->
+<!--?                                                            <th scope="col">Product</th>-->
+<!--?                                                            <th scope="col">Price / Item</th>-->
+<!--?                                                            <th scope="col">Select Item</th>-->
+<!--?                                                            <th scope="col">View on Amazon</th>-->
+<!--?                                                        </tr>-->
                                                         </thead>
                                                         <tbody>
-                                                        <tr tal:repeat="s show_popular">
-                                                            <td>${s.asin}</td>
-                                                            <td>${s.productHeadline}</td>
-                                                            <td>${currency} ${s.averageSellPrice}</td>
-                                                            <td>${s.salesRankCategory}</td>
-                                                            <td>
-                                                                <div class="btn btn-submit btn-select">Select </div>
-                                                            </td>
-                                                            <td>
-                                                                <a href="${s.productLink}" target="_blank"
-                                                                   class="btn btn-submit btn-view">
-                                                                    <img src="/static/img/popout.png"
-                                                                         srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
-                                                                </a>
-                                                            </td>
-                                                        </tr>
+<!--?                                                        <tr>-->
+<!--?                                                            <td>{s.asin}</td>-->
+<!--?                                                            <td>{s.productHeadline}</td>-->
+<!--?                                                            <td>{currency} {s.averageSellPrice}</td>-->
+<!--?                                                            <td>-->
+<!--?                                                                <div class="btn btn-submit btn-select">Select </div>-->
+<!--?                                                            </td>-->
+<!--?                                                            <td>-->
+<!--?                                                                <a href="{s.productLink}" target="_blank"-->
+<!--?                                                                   class="btn btn-submit btn-view">-->
+<!--?                                                                    <img src="/static/img/popout.png"-->
+<!--?                                                                         srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>-->
+<!--?                                                                </a>-->
+<!--?                                                            </td>-->
+<!--?                                                        </tr>-->
 
                                                         </tbody>
                                                     </table>
@@ -175,20 +172,22 @@
                                                 <div class="bottom-section">
                                                     <div class="block-pagination">
                                                         <div class="block-pagination-main">
-                                                            <div class="btn btn-link prev">
-                                                                <i class="la la-angle-left"></i>
-                                                            </div>
-                                                            <span>Page 1 of 3</span>
-                                                            <div class="btn btn-link next">
-                                                                <i class="la la-angle-right"></i>
-                                                            </div>
+<!--?                                                            <div class="btn btn-link prev">-->
+<!--?                                                                <i class="la la-angle-left"></i>-->
+<!--?                                                            </div>-->
+<!--?                                                            <span>Page 1 of 3</span>-->
+<!--?                                                            <div class="btn btn-link next">-->
+<!--?                                                                <i class="la la-angle-right"></i>-->
+<!--?                                                            </div>-->
                                                         </div>
                                                     </div>
-                                                    <div class="results">Results: 6</div>
+                                                    <div class="results"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+<!--?                                    SEARCH FOR ITEM -->
 
                                     <div class="tab-pane tab-pane-2" id="search" role="tabpanel"
                                          aria-labelledby="search-tab">
@@ -314,7 +313,7 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <a href="${s.productLink}" target="_blank" class="btn btn-submit btn-view">
+                                                                <a href="{s.productLink}" target="_blank" class="btn btn-submit btn-view">
                                                                     <img src="/static/img/popout.png"
                                                                          srcset="/static/img/popout@2x.png 2x, /static/img/popout@3x.png 3x"/>
                                                                 </a>
@@ -363,28 +362,28 @@
                                             </div>
                                             <div class="clearfix">
                                                 <p class="blue-text float-left">PRODUCT NAME</p>
-                                                <p class="blue-text float-right">${item.productHeadline}</p>
+                                                <p class="blue-text float-right">{item.productHeadline}</p>
                                             </div>
                                             <div class="clearfix">
                                                 <p class="blue-text float-left">ASIN #</p>
-                                                <p class="blue-text float-right">${item.asin}</p>
+                                                <p class="blue-text float-right">{item.asin}</p>
                                             </div>
                                             <div class="clearfix">
                                                 <p class="blue-text float-left">AMAZON PAGE</p>
                                                 <p class="blue-text float-right">
-                                                    <a href="${item.productLink}" target="_blank" class="btn btn-link">Click here</a></p>
+                                                    <a href="{item.productLink}" target="_blank" class="btn btn-link">Click here</a></p>
                                             </div>
                                             <div class="clearfix">
                                                 <p class="blue-text float-left">LIST PRICE [CONSIDER]</p>
-                                                <p class="blue-text float-right">${item.currency} {item_price}</p>
+                                                <p class="blue-text float-right">{item.currency} {item_price}</p>
                                             </div>
                                             <div class="clearfix">
                                                 <p class="blue-text float-left">PRIME</p>
-                                                <p class="blue-text float-right">${item.orderType}</p>
+                                                <p class="blue-text float-right">{item.orderType}</p>
                                             </div>
                                             <div class="clearfix">
                                                 <p class="blue-text float-left">mDASH PRICE</p>
-                                                <p class="blue-text float-right">${item.currency} ${item_price}</p>
+                                                <p class="blue-text float-right">{item.currency} ${item_price}</p>
                                             </div>
                                         </div>
                                         <div class="clearfix bottom-info">
@@ -392,7 +391,7 @@
                                                 <div class="col-12 col-lg-5 ml-auto">
                                                     <div class="row">
                                                         <p class="col-6 blue-text">Order Cost</p>
-                                                        <p class="col-6 grey-text">${item.currency} ${item_total_cost}</p>
+                                                        <p class="col-6 grey-text">{item.currency} ${item_total_cost}</p>
                                                     </div>
                                                     <div class="row">
                                                         <p class="col-6 blue-text">Service Fee</p>
@@ -403,7 +402,7 @@
                                         </div>
 
                                         <div class="clearfix block-btn">
-                                            <form action="/links/step_three_confirm/${countryID}:${item_quantity}:${item.asin}:${item.averageSellPrice}"
+                                            <form action="/links/step_three_confirm/${countryID}:${item_quantity}:{item.asin}:{item.averageSellPrice}"
                                                   method="POST">
                                                 <button class="btn btn-submit btn-green float-right">
                                                     Confirm and Proceed to Payment
@@ -417,6 +416,7 @@
 
                         </div>
 
+<!--?                        CAN MAKE THIS PART OF STEP TWO      -->
                     <div tal:condition="special_request">
                         <div class="row block-step">
                             <form action="/links/special_asin_request" method="POST">
@@ -434,7 +434,7 @@
                                         Request
                                     </button>
                                     <br>
-                                    NOTE: Special requests mпay take 3-7 business days to process
+                                    NOTE: Special requests may take 3-7 business days to process
                                 </div>
 
                             </form>
